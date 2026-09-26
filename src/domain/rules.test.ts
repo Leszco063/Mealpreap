@@ -58,6 +58,14 @@ describe('checkSlot / checkStorage / checkTime', () => {
     expect(checkSlot(chili, 'breakfast')).toEqual([{ code: 'slot', message: 'Chili ist nicht als Frühstück gedacht' }]);
   });
 
+  it('vorgekocht: nur an Kochtagen, frisch am selben Tag immer erlaubt', () => {
+    expect(checkStorage({ cookDate: '2026-09-29', date: '2026-10-01' }, chili, false)).toEqual([
+      { code: 'storage', message: 'Chili wird vorgekocht, aber 2026-09-29 ist kein Kochtag' },
+    ]);
+    expect(checkStorage({ cookDate: '2026-09-29', date: '2026-09-29' }, chili, false)).toEqual([]);
+    expect(checkStorage({ cookDate: '2026-09-29', date: '2026-10-01' }, chili, true)).toEqual([]);
+  });
+
   it('vorgekocht: innerhalb der Haltbarkeit ok, danach Verstoß', () => {
     expect(checkStorage({ cookDate: '2026-09-27', date: '2026-10-01' }, chili)).toEqual([]);
     expect(checkStorage({ cookDate: '2026-09-27', date: '2026-10-02' }, chili)).toEqual([
@@ -109,8 +117,28 @@ describe('checkMeal', () => {
     expect(checkMeal(base, ctx).map((v) => [v.code, v.personId])).toEqual([['diet', 'b']]);
   });
 
-  it('Personen mit 0 Portionen oder unbekannte IDs werden ignoriert', () => {
-    expect(checkMeal({ ...base, portions: { a: 1, b: 0, x: 1 } }, ctx)).toEqual([]);
+  it('Personen mit 0 Portionen werden ignoriert', () => {
+    expect(checkMeal({ ...base, portions: { a: 1, b: 0 } }, ctx)).toEqual([]);
+  });
+
+  it('Portionen für eine unbekannte Person → missing', () => {
+    expect(checkMeal({ ...base, portions: { a: 1, zz: 1, yy: 0 } }, ctx)).toEqual([
+      { code: 'missing', personId: 'zz', message: 'Person zz gibt es nicht mehr im Haushalt' },
+    ]);
+  });
+
+  it('vorgekocht an einem Nicht-Kochtag → storage', () => {
+    // Dienstag gekocht, Donnerstag gegessen, Kochtag ist nur Sonntag
+    const v = checkMeal({ ...base, portions: { a: 1 }, cookDate: '2026-09-29', date: '2026-10-01' }, ctx);
+    // zusätzlich 'time': 45 Min. an einem Werktag bei 30 Min. Limit
+    expect(v.map((x) => x.code)).toEqual(['storage', 'time']);
+    expect(v[0]?.message).toBe('Chili wird vorgekocht, aber 2026-09-29 ist kein Kochtag');
+  });
+
+  it('fehlende Zutat verdeckt keine anderen Verstöße (Allergie bleibt sichtbar)', () => {
+    const ohneZwiebel = { ...ctx, lookupIngredient: makeLookup(allIngredients.filter((i) => i.id !== 'zwiebel')) };
+    const allergisch = { ...ctx, ...ohneZwiebel, persons: [person({ id: 'a', allergies: ['milk'] })] };
+    expect(checkMeal({ ...base, portions: { a: 1 } }, allergisch).map((v) => v.code)).toEqual(['missing', 'allergen']);
   });
 
   it('Kochtag-Zeitlimit gilt am Kochtag (Sonntag)', () => {

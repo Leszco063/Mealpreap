@@ -41,7 +41,7 @@ export function choosePackages(neededG: number, packages: readonly Package[]): P
     .filter((p) => p.sizeG > 0 && p.priceEur >= 0)
     .map((p) => ({ size: Math.round(p.sizeG), cents: Math.round(p.priceEur * 100), pkg: p }))
     .filter((u) => u.size > 0);
-  if (usable.length === 0) return null;
+  if (usable.length === 0 || !Number.isFinite(neededG)) return null;
   const needed = Math.max(0, Math.ceil(neededG - 1e-9));
   if (needed === 0) return { picks: [], totalG: 0, totalEur: 0 };
 

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { dietsOf, fitsDiet, recipeProfile } from './diet';
-import { makeLookup, MissingIngredientError } from './recipe';
+import { makeLookup } from './recipe';
 import { allIngredients, chili, lachsPfanne, overnightOats } from './fixtures.test-data';
 import type { Recipe } from './types';
 
@@ -45,8 +45,16 @@ describe('diet', () => {
     expect(dietsOf(recipeProfile(r, lookup).flags)).toEqual(['omnivore', 'pescetarian', 'vegetarian', 'vegan']);
   });
 
-  it('unbekannte Zutat → MissingIngredientError', () => {
-    const r: Recipe = { ...chili, ingredients: [{ ingredientId: 'weg', amount: 1, unit: 'g' }] };
-    expect(() => recipeProfile(r, lookup)).toThrow(MissingIngredientError);
+  it('unbekannte Zutat wird gemeldet, die übrigen Zutaten zählen weiter', () => {
+    const r: Recipe = {
+      ...chili,
+      ingredients: [
+        { ingredientId: 'weg', amount: 1, unit: 'g' },
+        { ingredientId: 'magerquark', amount: 100, unit: 'g' },
+      ],
+    };
+    const p = recipeProfile(r, lookup);
+    expect(p.missingIngredientIds).toEqual(['weg']);
+    expect(p.allergens.has('milk')).toBe(true);
   });
 });

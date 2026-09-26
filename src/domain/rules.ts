@@ -1,7 +1,7 @@
 import type { Meal, MealType, Person, Recipe } from './types';
 import { ALLERGEN_LABEL, DIET_LABEL, MEAL_TYPE_LABEL } from './labels';
 import { fitsDiet, recipeProfile } from './diet';
-import { MissingIngredientError, type IngredientLookup } from './recipe';
+import type { IngredientLookup } from './recipe';
 import { diffDays, isoWeekday } from './dates';
 
 export type ViolationCode = 'diet' | 'pork' | 'allergen' | 'disliked' | 'slot' | 'storage' | 'time' | 'missing';
@@ -49,7 +49,11 @@ export function checkSlot(recipe: Recipe, slot: MealType): Violation[] {
   return [{ code: 'slot', message: `${recipe.title} ist nicht als ${MEAL_TYPE_LABEL[slot]} gedacht` }];
 }
 
-export function checkStorage(meal: Pick<Meal, 'date' | 'cookDate'>, recipe: Recipe): Violation[] {
+/**
+ * Haltbarkeit (Spec §6, Regel 3): Vorgekochtes wird an einem Kochtag gekocht (oder am Esstag selbst)
+ * und innerhalb der Kühlschrank-Tage gegessen; Frisches am Tag der Zubereitung.
+ */
+export function checkStorage(meal: Pick<Meal, 'date' | 'cookDate'>, recipe: Recipe, isCookDay = true): Violation[] {
   const days = diffDays(meal.cookDate, meal.date);
   if (days < 0) {
     return [{ code: 'storage', message: `${recipe.title} wird gegessen, bevor es gekocht ist` }];
@@ -58,13 +62,17 @@ export function checkStorage(meal: Pick<Meal, 'date' | 'cookDate'>, recipe: Reci
     if (days === 0) return [];
     return [{ code: 'storage', message: `${recipe.title} sollte am Tag der Zubereitung gegessen werden` }];
   }
-  if (days <= recipe.storage.fridgeDays) return [];
-  return [
-    {
+  const v: Violation[] = [];
+  if (days > 0 && !isCookDay) {
+    v.push({ code: 'storage', message: `${recipe.title} wird vorgekocht, aber ${meal.cookDate} ist kein Kochtag` });
+  }
+  if (days > recipe.storage.fridgeDays) {
+    v.push({
       code: 'storage',
       message: `${recipe.title} hält nur ${recipe.storage.fridgeDays} Tage im Kühlschrank (hier ${days} Tage)`,
-    },
-  ];
+    });
+  }
+  return v;
 }
 
 export function checkTime(recipe: Recipe, person: Person, isCookDay: boolean): Violation[] {
@@ -94,14 +102,18 @@ export function checkMeal(meal: Meal, ctx: MealCheckContext): Violation[] {
   if (!recipe) return [{ code: 'missing', message: `Rezept ${meal.recipeId} ist nicht mehr verfügbar` }];
   const eaters = ctx.persons.filter((p) => (meal.portions[p.id] ?? 0) > 0);
   const isCookDay = ctx.cookWeekdays.includes(isoWeekday(meal.cookDate));
-  try {
-    const v: Violation[] = [...checkSlot(recipe, meal.slot), ...checkStorage(meal, recipe)];
-    for (const p of eaters) {
-      v.push(...checkRecipeForPerson(recipe, p, ctx.lookupIngredient), ...checkTime(recipe, p, isCookDay));
+  const v: Violation[] = [];
+  for (const [personId, portion] of Object.entries(meal.portions)) {
+    if (portion > 0 && !ctx.persons.some((p) => p.id === personId)) {
+      v.push({ code: 'missing', personId, message: `Person ${personId} gibt es nicht mehr im Haushalt` });
     }
-    return v;
-  } catch (e) {
-    if (e instanceof MissingIngredientError) return [{ code: 'missing', message: e.message }];
-    throw e;
   }
+  v.push(...checkSlot(recipe, meal.slot), ...checkStorage(meal, recipe, isCookDay));
+  for (const id of recipeProfile(recipe, ctx.lookupIngredient).missingIngredientIds) {
+    v.push({ code: 'missing', message: `${recipe.title}: Zutat ${id} ist nicht mehr verfügbar` });
+  }
+  for (const p of eaters) {
+    v.push(...checkRecipeForPerson(recipe, p, ctx.lookupIngredient), ...checkTime(recipe, p, isCookDay));
+  }
+  return v;
 }

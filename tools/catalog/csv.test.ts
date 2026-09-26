@@ -10,6 +10,23 @@ describe('parseNumber', () => {
     expect(parseNumber('')).toBeUndefined();
     expect(parseNumber('abc')).toBeNaN();
   });
+
+  it('Tausenderpunkt wird abgelehnt statt als Dezimalpunkt gelesen', () => {
+    expect(parseNumber('1.000')).toBeNaN();
+    expect(parseNumber('12.500')).toBeNaN();
+    expect(parseNumber('1.000,5')).toBeNaN();
+  });
+});
+
+describe('parseIngredientsCsv – Kodierung', () => {
+  it('nicht als UTF-8 gespeicherte Datei (Ersatzzeichen) → Fehler', () => {
+    const text = `${CSV_COLUMNS.join(';')}\nkaese;K�se;;kuehlregal;;;200:1,99;2026-09-26;;;;300;25;22;0;0;0;1`;
+    const { rows, errors } = parseIngredientsCsv(text);
+    expect(rows).toEqual([]);
+    expect(errors).toEqual([
+      'ingredients.csv ist nicht als UTF-8 gespeichert (Umlaute kaputt) – in Excel „CSV UTF-8“ wählen',
+    ]);
+  });
 });
 
 describe('parseIngredientsCsv', () => {

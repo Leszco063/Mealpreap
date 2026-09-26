@@ -42,6 +42,10 @@ export function buildShoppingList(meals: readonly Meal[], ctx: ShoppingContext, 
       warnings.push(`Rezept ${meal.recipeId} ist nicht mehr verfügbar (${meal.date})`);
       continue;
     }
+    if (!(recipe.servings > 0)) {
+      warnings.push(`${recipe.title}: ungültige Portionsanzahl ${recipe.servings}`);
+      continue;
+    }
     const portions = Object.values(meal.portions).reduce((sum, p) => sum + Math.max(0, p), 0);
     if (portions === 0) continue;
     const factor = portions / recipe.servings;

@@ -34,10 +34,14 @@ export interface IngredientRow {
   manual: Partial<Nutrients>;
 }
 
-/** Leer → undefined, ungültig → NaN (wird vom Schema abgelehnt). Dezimalkomma erlaubt. */
+/**
+ * Leer → undefined, ungültig → NaN (wird vom Schema abgelehnt). Dezimalkomma erlaubt.
+ * Tausenderpunkte ('1.000') werden abgelehnt, sonst würde aus 1000 g still 1 g.
+ */
 export function parseNumber(s: string): number | undefined {
   const t = s.trim();
   if (t === '') return undefined;
+  if (/^\d{1,3}(\.\d{3})+(,\d+)?$/.test(t)) return Number.NaN;
   const n = Number(t.replace(',', '.'));
   return Number.isFinite(n) ? n : Number.NaN;
 }
@@ -57,6 +61,13 @@ function parsePackages(s: string): { sizeG: number; priceEur: number }[] {
 }
 
 export function parseIngredientsCsv(text: string): { rows: IngredientRow[]; errors: string[] } {
+  // Beim Einlesen als UTF-8 werden ANSI-Umlaute (Excel "CSV (Trennzeichen-getrennt)") zu U+FFFD
+  if (text.includes('\u{FFFD}')) {
+    return {
+      rows: [],
+      errors: ['ingredients.csv ist nicht als UTF-8 gespeichert (Umlaute kaputt) – in Excel „CSV UTF-8“ wählen'],
+    };
+  }
   const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/);
   const header = (lines[0] ?? '').split(';').map((s) => s.trim());
   if (header.join(';') !== CSV_COLUMNS.join(';')) {

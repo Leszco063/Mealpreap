@@ -44,6 +44,11 @@ describe('choosePackages', () => {
     expect(choosePackages(100, [])).toBeNull();
   });
 
+  it('ungültige Menge (unendlich/NaN) → null statt Absturz', () => {
+    expect(choosePackages(Infinity, quark)).toBeNull();
+    expect(choosePackages(Number.NaN, quark)).toBeNull();
+  });
+
   it('Cent-genau ohne Rundungsfehler', () => {
     // 3 × 0,10 € ergibt als Float 0,30000000000000004
     expect(choosePackages(300, [{ sizeG: 100, priceEur: 0.1 }])?.totalEur).toBe(0.3);

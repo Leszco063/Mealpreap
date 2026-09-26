@@ -77,6 +77,14 @@ describe('buildShoppingList', () => {
     expect(list.items.map((i) => i.ingredientId)).toEqual(['rinderhack', 'olivenoel', 'salz']);
   });
 
+  it('Rezept mit 0 Grundportionen → Warnung statt Absturz', () => {
+    const kaputt = { ...allRecipes[1]!, id: 'kaputt', title: 'Kaputt', servings: 0 };
+    const c: ShoppingContext = { ...ctx, lookupRecipe: makeLookup([...allRecipes, kaputt]) };
+    const list = buildShoppingList([meal({ recipeId: 'kaputt' })], c, woche);
+    expect(list.items).toEqual([]);
+    expect(list.warnings).toEqual(['Kaputt: ungültige Portionsanzahl 0']);
+  });
+
   it('Zutat ohne Preis → Warnung, Summe ohne diese Zutat', () => {
     const ohnePreis: ShoppingContext = {
       ...ctx,
