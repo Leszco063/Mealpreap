@@ -8,7 +8,9 @@
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "test": "vitest run"
+    "test": "vitest run",
+    "bls:extract": "tsx tools/bls-extract.ts",
+    "bls:search": "tsx tools/bls-search.ts"
   },
   "dependencies": {
     "react": "^19.3.0",
