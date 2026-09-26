@@ -200,14 +200,15 @@ Mobile-first, Deutsch, heller und dunkler Modus, untere Navigationsleiste mit f�
 
 Verzeichnis `catalog/` im Repo, Skripte in `tools/` (TypeScript, per `tsx` ausgeführt).
 
-- `tools/import-bls.ts` liest die BLS-Excel-Datei (nicht im Repo, lokaler Pfad) und schreibt die Nährwerte der in `catalog/ingredients.csv` gelisteten BLS-Codes nach `catalog/ingredients.json`.
-- `catalog/ingredients.csv` – von Hand gepflegt: ID, Name, BLS-Code, Kategorie, Dichte, Stückgewicht, Packungen mit Preisen, Preisstand, Flags, Allergene, Grundvorrat.
+- `tools/bls-extract.ts` liest die BLS-Excel-Datei (nicht im Repo, lokal unter `data/bls/`) und schreibt eine schlanke Fassung aller Lebensmittel (Code, Name, 7 Nährwerte pro 100 g) nach `catalog/bls-slim.json`. Diese Datei wird committet (CC BY 4.0, Quellenangabe in `catalog/README.md`), damit CI ohne die Excel-Datei auskommt. `tools/bls-search.ts` durchsucht sie nach Namen.
+- `catalog/ingredients.csv` – von Hand gepflegt (Trennzeichen `;`, Dezimalkomma erlaubt): ID, Name, BLS-Code, Kategorie, Dichte, Stückgewicht, Packungen mit Preisen, Preisstand, Flags, Allergene, Grundvorrat; ohne BLS-Code alternativ eigene Nährwerte pro 100 g.
 - `catalog/recipes/*.yaml` – ein Rezept pro Datei.
 - `tools/build-catalog.ts` erzeugt `public/catalog.json` und **bricht ab**, wenn:
   - eine Zutat nicht existiert oder eine Einheit nicht umrechenbar ist,
   - `storage` fehlt oder `fridgeDays` außerhalb 1–5 liegt,
-  - die Nährwerte pro Portion unplausibel sind (|kcal − (4·Protein + 4·KH + 9·Fett)| > 15 % bzw. kcal pro Portion außerhalb 50–1.500),
-  - eine ID doppelt vorkommt oder eine zuvor vergebene ID fehlt, ohne in `catalog/retired-ids.txt` zu stehen.
+  - die Nährwerte pro Portion unplausibel sind (|kcal − (4·Protein + 4·KH + 9·Fett + 2·Ballaststoffe)| > max(15 % der kcal, 10 kcal) bzw. kcal pro Portion außerhalb 50–1.500; die 2 kcal/g für Ballaststoffe entsprechen der BLS-Energieformel),
+  - eine ID doppelt vorkommt oder eine zuvor vergebene ID fehlt, ohne in `catalog/retired-ids.txt` zu stehen. Alle je vergebenen IDs stehen in `catalog/ids.lock` (vom Build gepflegt, committet).
+- Ergebnis `public/catalog.json` wird committet; `npm run catalog:check` (auch in CI) schlägt fehl, wenn die Datei nicht zum Quellstand passt.
 - **Startpaket:** ca. 100 Rezepte, verteilt auf Frühstück, Mittag, Abend und Snacks, mit einem hohen Anteil vorkochbarer Gerichte sowie vegetarischen Optionen. Haltbarkeiten folgen gängigen Empfehlungen (gekochte Gerichte im Kühlschrank meist 3–4 Tage, Fisch und Reisgerichte kürzer).
 - Nährwerte der Startrezepte entstehen ausschließlich rechnerisch aus BLS-Daten.
 
