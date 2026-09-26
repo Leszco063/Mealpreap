@@ -1,0 +1,17 @@
+id: hartgekochte-eier
+title: Hartgekochte Eier
+description: Der einfachste Eiweiß-Snack – ungeschält im Kühlschrank mehrere Tage haltbar.
+servings: 1
+prepMinutes: 2
+cookMinutes: 10
+mealTypes: [snack, breakfast]
+storage: { kind: prep, fridgeDays: 5, freezable: false }
+tags: [high-protein, low-carb, vegetarisch]
+sources:
+  - https://www.verbraucherzentrale-niedersachsen.de/themen/ernaehrung-lebensmittel/gesunde-ernaehrung/meal-prep-vorkochen-abfaelle-vermeiden
+ingredients:
+  - { ingredient: eier, amount: 2, unit: stk }
+steps:
+  - Eier am stumpfen Ende anstechen und in kochendes Wasser legen.
+  - 9–10 Minuten kochen, dann kalt abschrecken.
+  - Ungeschält in einer Box im Kühlschrank lagern; erst beim Essen schälen und salzen.

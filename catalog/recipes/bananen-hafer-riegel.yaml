@@ -1,0 +1,25 @@
+id: bananen-hafer-riegel
+title: Bananen-Hafer-Riegel
+description: Saftige Ofen-Riegel aus reifen Bananen, Haferflocken und Mandeln – gesüßt nur mit Frucht.
+servings: 8
+prepMinutes: 10
+cookMinutes: 25
+mealTypes: [snack]
+storage: { kind: prep, fridgeDays: 4, freezable: true }
+tags: [ofen, vegetarisch]
+sources:
+  - https://www.kitchenstories.com/bananen-haferflocken-riegel/167488
+  - https://www.kitchenstories.com/bananen-himbeer-riegel/145576
+ingredients:
+  - { ingredient: banane, amount: 3, unit: stk }
+  - { ingredient: haferflocken, amount: 200, unit: g }
+  - { ingredient: eier, amount: 1, unit: stk }
+  - { ingredient: mandeln, amount: 50, unit: g }
+  - { ingredient: rapsoel, amount: 2, unit: el }
+  - { ingredient: backpulver, amount: 5, unit: g }
+steps:
+  - Backofen auf 180 °C Ober-/Unterhitze vorheizen und eine Form (ca. 20 × 20 cm) mit Backpapier auslegen.
+  - Bananen zerdrücken und mit Ei und Öl verrühren.
+  - Haferflocken, gehackte Mandeln, Backpulver, Zimt und eine Prise Salz untermischen.
+  - Masse in die Form drücken und 20–25 Minuten goldbraun backen.
+  - Vollständig abkühlen lassen und in 16 Riegel schneiden (2 Riegel = 1 Portion).

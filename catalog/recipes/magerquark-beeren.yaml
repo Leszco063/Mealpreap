@@ -1,0 +1,19 @@
+id: magerquark-beeren
+title: Magerquark mit Heidelbeeren
+description: Schneller Eiweiß-Snack aus Quark, Heidelbeeren und einem Hauch Honig.
+servings: 1
+prepMinutes: 3
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/beerenquark
+ingredients:
+  - { ingredient: magerquark, amount: 200, unit: g }
+  - { ingredient: heidelbeeren-tk, amount: 100, unit: g }
+  - { ingredient: honig, amount: 10, unit: g }
+steps:
+  - Heidelbeeren antauen lassen.
+  - Quark mit einem Schuss Wasser und dem Honig cremig rühren.
+  - Beeren darübergeben oder unterheben.

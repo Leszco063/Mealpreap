@@ -1,0 +1,22 @@
+id: energy-balls-datteln
+title: Energy Balls mit Hafer und Datteln
+description: Süße Kugeln aus Haferflocken, Datteln, Mandeln und Erdnussmus – ganz ohne zugesetzten Zucker.
+servings: 6
+prepMinutes: 20
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: prep, fridgeDays: 5, freezable: true }
+tags: [ohne-kochen, vegan]
+sources:
+  - https://eatsmarter.de/rezepte/dattel-energy-balls
+  - https://www.kitchenstories.com/schnelle-energiekugeln/190912
+ingredients:
+  - { ingredient: haferflocken, amount: 100, unit: g }
+  - { ingredient: datteln, amount: 150, unit: g }
+  - { ingredient: mandeln, amount: 60, unit: g }
+  - { ingredient: erdnussmus, amount: 40, unit: g }
+steps:
+  - Datteln 10 Minuten in warmem Wasser einweichen und gut abtropfen lassen.
+  - Mandeln im Mixer grob hacken, Haferflocken, Datteln und Erdnussmus zugeben und zu einer klebrigen Masse mixen.
+  - Mit feuchten Händen 18 Kugeln formen (3 Kugeln = 1 Portion).
+  - Luftdicht im Kühlschrank lagern oder portionsweise einfrieren.

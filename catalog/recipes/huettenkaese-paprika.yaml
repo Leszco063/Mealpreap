@@ -1,0 +1,17 @@
+id: huettenkaese-paprika
+title: Hüttenkäse mit Paprika
+description: Körniger Frischkäse mit knackigen Paprikastreifen – sättigend und kalorienarm.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, low-carb, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/zutaten/huettenkaese-rezepte
+ingredients:
+  - { ingredient: koerniger-frischkaese, amount: 200, unit: g }
+  - { ingredient: paprika-rot, amount: 1, unit: stk }
+steps:
+  - Paprika in Streifen schneiden.
+  - Hüttenkäse mit Salz, Pfeffer und nach Wunsch Paprikapulver würzen und mit den Streifen dippen.

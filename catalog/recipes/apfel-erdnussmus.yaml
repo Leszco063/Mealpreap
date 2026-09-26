@@ -1,0 +1,17 @@
+id: apfel-erdnussmus
+title: Apfelschnitze mit Erdnussmus
+description: Knackige Apfelspalten zum Dippen in Erdnussmus.
+servings: 1
+prepMinutes: 3
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: fresh }
+tags: [schnell, vegan]
+sources:
+  - https://www.essen-und-trinken.de/gesund-essen/80502-rtkl-gesunde-snacks-leicht-und-lecker
+ingredients:
+  - { ingredient: apfel, amount: 1, unit: stk }
+  - { ingredient: erdnussmus, amount: 20, unit: g }
+steps:
+  - Apfel entkernen und in Spalten schneiden.
+  - Mit Erdnussmus zum Dippen servieren.

@@ -1,0 +1,20 @@
+id: geroestete-kichererbsen
+title: Geröstete Kichererbsen
+description: Knuspriger Knabber-Snack aus dem Ofen, gewürzt mit Paprika und Kreuzkümmel.
+servings: 2
+prepMinutes: 5
+cookMinutes: 35
+mealTypes: [snack]
+storage: { kind: prep, fridgeDays: 5, freezable: false }
+tags: [ofen, vegan]
+sources:
+  - https://www.essen-und-trinken.de/rezepte/geroestete-kichererbsen-13505384.html
+  - https://eatsmarter.de/rezepte/gebackener-kichererbsen-snack
+ingredients:
+  - { ingredient: kichererbsen, amount: 240, unit: g, note: abgetropft }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+steps:
+  - Backofen auf 200 °C Ober-/Unterhitze vorheizen.
+  - Kichererbsen abspülen und mit Küchenpapier sehr gut trocken tupfen.
+  - Mit Öl, Salz, Paprikapulver und Kreuzkümmel mischen und auf einem Blech mit Backpapier verteilen.
+  - 30–35 Minuten rösten, dabei einmal wenden. Vollständig abkühlen lassen und in einem Glas aufbewahren.

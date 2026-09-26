@@ -1,0 +1,21 @@
+id: thunfisch-dip-gurke
+title: Thunfisch-Dip mit Gurkensticks
+description: Eiweißreicher Dip aus Thunfisch, Magerquark, Zitrone und Petersilie.
+servings: 2
+prepMinutes: 10
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [ohne-kochen, high-protein, low-carb]
+sources:
+  - https://eatsmarter.de/rezepte/thunfisch-dip
+ingredients:
+  - { ingredient: thunfisch, amount: 140, unit: g, note: abgetropft }
+  - { ingredient: magerquark, amount: 150, unit: g }
+  - { ingredient: zitrone, amount: 0.25, unit: stk }
+  - { ingredient: petersilie, amount: 10, unit: g }
+  - { ingredient: gurke, amount: 1, unit: stk }
+steps:
+  - Thunfisch abtropfen lassen und mit einer Gabel fein zerpflücken.
+  - Mit Quark und Zitronensaft verrühren, Petersilie hacken und unterheben, mit Salz und Pfeffer abschmecken.
+  - Gurke in Sticks schneiden und getrennt vom Dip verpacken.

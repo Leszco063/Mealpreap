@@ -1,0 +1,24 @@
+id: hummus-gemuesesticks
+title: Hummus mit Gemüsesticks
+description: Cremiger Kichererbsen-Dip mit Zitrone und Knoblauch, dazu knackige Karotten- und Gurkensticks.
+servings: 4
+prepMinutes: 15
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: prep, fridgeDays: 4, freezable: false }
+tags: [ohne-kochen, vegan]
+sources:
+  - https://eatsmarter.de/rezepte/hummus-ohne-tahini
+  - https://www.essen-und-trinken.de/hummus/
+ingredients:
+  - { ingredient: kichererbsen, amount: 240, unit: g, note: abgetropft }
+  - { ingredient: olivenoel, amount: 2, unit: el }
+  - { ingredient: zitrone, amount: 0.5, unit: stk }
+  - { ingredient: knoblauch, amount: 1, unit: stk, note: Zehe }
+  - { ingredient: karotte, amount: 4, unit: stk }
+  - { ingredient: gurke, amount: 1, unit: stk }
+steps:
+  - Kichererbsen abspülen und abtropfen lassen, Knoblauch schälen.
+  - Kichererbsen, Knoblauch, Zitronensaft, Olivenöl und 3–4 Esslöffel kaltes Wasser fein pürieren.
+  - Mit Salz und Kreuzkümmel abschmecken und in vier kleine Dosen füllen.
+  - Karotten und Gurke in Sticks schneiden und getrennt vom Dip verpacken.

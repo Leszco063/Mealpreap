@@ -1,0 +1,19 @@
+id: protein-shake-banane
+title: Protein-Shake mit Banane
+description: Selbstgemachter Shake aus Magerquark, Milch und Banane – ohne Eiweißpulver.
+servings: 1
+prepMinutes: 3
+cookMinutes: 0
+mealTypes: [snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://www.kitchenstories.com/de/rezepte/magerquark-bananen-protein-shake-e8e8
+  - https://eatsmarter.de/rezepte/erdnuss-bananen-shake-mit-quark
+ingredients:
+  - { ingredient: magerquark, amount: 150, unit: g }
+  - { ingredient: milch-fettarm, amount: 200, unit: ml }
+  - { ingredient: banane, amount: 1, unit: stk }
+steps:
+  - Banane in Stücke brechen.
+  - Mit Quark, Milch und einer Prise Zimt im Mixer oder mit dem Pürierstab schaumig mixen.
