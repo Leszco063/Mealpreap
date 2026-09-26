@@ -96,6 +96,8 @@ export interface Recipe {
   tags: string[];
   source: 'starter' | 'own' | 'import';
   url?: string;
+  /** Quellen, an denen sich das Rezept orientiert (nur Startrezepte) */
+  sources?: string[];
   basedOn?: string;
   version: number;
 }

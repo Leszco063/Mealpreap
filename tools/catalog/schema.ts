@@ -49,6 +49,7 @@ export const recipeFileSchema = z.strictObject({
   ]),
   tags: z.array(z.string()).default([]),
   version: z.number().int().min(1).default(1),
+  sources: z.array(z.url()).default([]),
   ingredients: z
     .array(
       z.strictObject({

@@ -18,7 +18,7 @@ const readLines = (path: string) =>
 
 const recipeDir = 'catalog/recipes';
 const recipeFiles = readdirSync(recipeDir)
-  .filter((f) => f.endsWith('.yaml'))
+  .filter((f) => !f.startsWith('.'))
   .sort()
   .map((fileName) => ({ fileName, text: read(join(recipeDir, fileName)) }));
 const lockedIds = readLines('catalog/ids.lock');

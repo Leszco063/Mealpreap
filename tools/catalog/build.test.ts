@@ -25,13 +25,20 @@ const bls: BlsEntry[] = [
     per100g: { kcal: 10, protein: 0, fat: 0, carbs: 0, fiber: 0, sugar: 0, salt: 0 },
     incomplete: true,
   },
+  {
+    code: 'F503100',
+    name: 'Banane roh',
+    nameEn: 'Banana raw',
+    per100g: { kcal: 93, protein: 1.2, fat: 0.2, carbs: 20, fiber: 2, sugar: 17, salt: 0 },
+    incomplete: false,
+  },
 ];
 
 const csv = [
   CSV_COLUMNS.join(';'),
   'haferflocken;Haferflocken;C133000;trockenware;;;500:0,69;2026-09-26;;gluten;;;;;;;;',
   'milch;Milch 1,5 %;M111200;kuehlregal;1,03;;1030:0,99;2026-09-26;animal|dairy;milk;;;;;;;;',
-  'banane;Banane;;obst-gemuese;;120;1000:1,69;2026-09-26;;;;93;1,2;0,2;20;2;17;0',
+  'banane;Banane;F503100;obst-gemuese;;120;1000:1,69;2026-09-26;;;;;;;;;;',
 ].join('\n');
 
 const oats = `
@@ -138,6 +145,33 @@ describe('buildCatalog', () => {
     expect(buildCatalog(input({ lockedIds: locked, retiredIds: ['zutat:alt'] })).errors).toEqual([]);
     expect(buildCatalog(input({ retiredIds: ['zutat:milch'] })).errors).toEqual([
       'ID zutat:milch steht in retired-ids.txt, wird aber noch benutzt',
+    ]);
+  });
+
+  it('Quellen-URLs werden übernommen, ungültige abgelehnt', () => {
+    const withSources = oats.replace('steps:', 'sources:\n  - https://eatsmarter.de/rezepte/haferbrei\nsteps:');
+    expect(buildCatalog(input({ recipeFiles: [{ fileName: 'haferbrei.yaml', text: withSources }] })).catalog?.recipes[0]?.sources).toEqual([
+      'https://eatsmarter.de/rezepte/haferbrei',
+    ]);
+    const bad = oats.replace('steps:', 'sources:\n  - keine-url\nsteps:');
+    expect(buildCatalog(input({ recipeFiles: [{ fileName: 'haferbrei.yaml', text: bad }] })).errors[0]).toMatch(
+      /^haferbrei\.yaml: sources\.0 – /,
+    );
+  });
+
+  it('Startrezepte nur mit BLS-Zutaten', () => {
+    const manualCsv = csv.replace(
+      'banane;Banane;F503100;obst-gemuese;;120;1000:1,69;2026-09-26;;;;;;;;;;',
+      'banane;Banane;;obst-gemuese;;120;1000:1,69;2026-09-26;;;;93;1,2;0,2;20;2;17;0',
+    );
+    expect(buildCatalog(input({ ingredientsCsv: manualCsv })).errors).toEqual([
+      'haferbrei.yaml: Banane: Startrezepte dürfen nur Zutaten mit BLS-Code verwenden',
+    ]);
+  });
+
+  it('falsche Dateiendung', () => {
+    expect(buildCatalog(input({ recipeFiles: [{ fileName: 'haferbrei.yml', text: oats }] })).errors).toEqual([
+      'haferbrei.yml: Rezeptdateien müssen auf .yaml enden',
     ]);
   });
 

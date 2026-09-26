@@ -76,6 +76,9 @@ function validateRecipe(recipe: Recipe, lookup: IngredientLookup): string[] {
       const missing = ri.unit === 'stk' ? 'pieceWeightG' : 'densityGPerMl';
       errors.push(`${ing.name}: Einheit ${ri.unit} nicht umrechenbar (${missing} fehlt)`);
     }
+    if (ing.blsCode === null) {
+      errors.push(`${ing.name}: Startrezepte dürfen nur Zutaten mit BLS-Code verwenden`);
+    }
   }
   if (errors.length > 0) return errors;
   const n = perPortion(recipe, lookup);
@@ -129,6 +132,10 @@ export function buildCatalog(input: BuildInput): BuildResult {
   const lookup = makeLookup(ingredients);
   const recipes: Recipe[] = [];
   for (const file of input.recipeFiles) {
+    if (!file.fileName.endsWith('.yaml')) {
+      errors.push(`${file.fileName}: Rezeptdateien müssen auf .yaml enden`);
+      continue;
+    }
     let data: unknown;
     try {
       data = parseYaml(file.text);
@@ -174,6 +181,7 @@ export function buildCatalog(input: BuildInput): BuildResult {
       tags: f.tags,
       source: 'starter',
       version: f.version,
+      sources: f.sources,
     };
     const recipeErrors = validateRecipe(recipe, lookup);
     if (recipeErrors.length > 0) {
