@@ -1,0 +1,22 @@
+id: ruehrei-vollkornbrot
+title: Rührei auf Vollkornbrot
+description: Klassisches Rührei mit Schnittlauch auf kräftigem Vollkornbrot, dazu Tomate.
+servings: 1
+prepMinutes: 5
+cookMinutes: 5
+mealTypes: [breakfast]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://www.lecker.de/ruehrei-auf-vollkornbrot-72211.html
+ingredients:
+  - { ingredient: eier, amount: 3, unit: stk }
+  - { ingredient: milch-fettarm, amount: 30, unit: ml }
+  - { ingredient: butter, amount: 5, unit: g }
+  - { ingredient: vollkornbrot, amount: 2, unit: stk }
+  - { ingredient: schnittlauch, amount: 5, unit: g }
+  - { ingredient: tomaten, amount: 1, unit: stk }
+steps:
+  - Eier mit Milch, Salz und Pfeffer verquirlen, Schnittlauch in Röllchen schneiden.
+  - Butter in einer beschichteten Pfanne bei mittlerer Hitze schmelzen, Eier hineingeben und unter langsamem Schieben cremig stocken lassen.
+  - Rührei auf das Brot geben, mit Schnittlauch bestreuen und mit Tomatenscheiben servieren.

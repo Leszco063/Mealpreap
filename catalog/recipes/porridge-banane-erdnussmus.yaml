@@ -1,0 +1,22 @@
+id: porridge-banane-erdnussmus
+title: Porridge mit Banane und Erdnussmus
+description: Warmer Haferbrei, gesüßt mit reifer Banane und abgerundet mit einem Löffel Erdnussmus.
+servings: 1
+prepMinutes: 2
+cookMinutes: 8
+mealTypes: [breakfast]
+storage: { kind: fresh }
+tags: [schnell, vegetarisch]
+sources:
+  - https://www.kitchenstories.com/de/rezepte/bananen-porridge-mit-fruchten-a6ea
+  - https://eatsmarter.de/rezepte/overnight-oats-mit-banane-und-erdnussmus
+ingredients:
+  - { ingredient: haferflocken, amount: 60, unit: g }
+  - { ingredient: milch-fettarm, amount: 250, unit: ml }
+  - { ingredient: banane, amount: 1, unit: stk }
+  - { ingredient: erdnussmus, amount: 15, unit: g }
+steps:
+  - Die Hälfte der Banane mit einer Gabel zerdrücken.
+  - Milch mit der zerdrückten Banane und einer Prise Zimt aufkochen, Haferflocken einrühren.
+  - Bei kleiner Hitze unter Rühren 3–5 Minuten köcheln, bis ein cremiger Brei entsteht.
+  - In eine Schüssel füllen, mit den restlichen Bananenscheiben und dem Erdnussmus toppen.

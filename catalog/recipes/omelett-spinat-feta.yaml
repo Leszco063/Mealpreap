@@ -1,0 +1,23 @@
+id: omelett-spinat-feta
+title: Omelett mit Spinat und Feta
+description: Luftiges Omelett, gefüllt mit frischem Spinat und würzigem Hirtenkäse.
+servings: 2
+prepMinutes: 5
+cookMinutes: 10
+mealTypes: [breakfast, dinner]
+storage: { kind: fresh }
+tags: [schnell, high-protein, low-carb, vegetarisch]
+sources:
+  - https://www.kitchenstories.com/omelett-mit-spinat-und-feta/204506
+  - https://www.essen-und-trinken.de/rezepte/84457-rzpt-spinat-omelette-mit-feta
+ingredients:
+  - { ingredient: eier, amount: 5, unit: stk }
+  - { ingredient: milch-fettarm, amount: 3, unit: el }
+  - { ingredient: babyspinat, amount: 150, unit: g }
+  - { ingredient: hirtenkaese, amount: 100, unit: g }
+  - { ingredient: butter, amount: 10, unit: g }
+steps:
+  - Eier mit Milch, Salz, Pfeffer und etwas geriebener Muskatnuss verquirlen.
+  - Die Hälfte der Butter in einer Pfanne schmelzen, die Hälfte der Eimasse hineingeben und bei mittlerer Hitze 1–2 Minuten stocken lassen.
+  - Die Hälfte des Spinats und des zerbröselten Käses auf eine Hälfte geben, Omelett zuklappen und noch 2 Minuten garen.
+  - Mit der zweiten Portion genauso verfahren.

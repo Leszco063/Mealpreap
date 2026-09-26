@@ -1,0 +1,20 @@
+id: quarkbrot-radieschen
+title: Quarkbrot mit Radieschen und Schnittlauch
+description: Vollkornbrot mit cremigem Magerquark, knackigen Radieschen und frischem Schnittlauch.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://www.essen-und-trinken.de/rezepte/48116-rzpt-kraeuter-radieschen-quark
+ingredients:
+  - { ingredient: vollkornbrot, amount: 2, unit: stk }
+  - { ingredient: magerquark, amount: 150, unit: g }
+  - { ingredient: radieschen, amount: 6, unit: stk }
+  - { ingredient: schnittlauch, amount: 5, unit: g }
+steps:
+  - Quark mit 1–2 Esslöffeln Wasser glatt rühren, mit Salz und Pfeffer würzen.
+  - Radieschen in dünne Scheiben, Schnittlauch in Röllchen schneiden.
+  - Brot mit Quark bestreichen, mit Radieschen belegen und mit Schnittlauch bestreuen.

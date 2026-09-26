@@ -1,0 +1,21 @@
+id: chia-pudding-beeren
+title: Chia-Pudding mit Beeren
+description: Chiasamen quellen über Nacht in Milch, dazu Skyr für extra Eiweiß und Heidelbeeren.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [ohne-kochen, vegetarisch]
+sources:
+  - https://www.lecker.de/chia-pudding-grundrezept-130918.html
+ingredients:
+  - { ingredient: chiasamen, amount: 25, unit: g }
+  - { ingredient: milch-fettarm, amount: 200, unit: ml }
+  - { ingredient: skyr, amount: 100, unit: g }
+  - { ingredient: heidelbeeren-tk, amount: 80, unit: g }
+steps:
+  - Chiasamen und Milch in einem Glas verrühren, nach 10 Minuten noch einmal umrühren, damit sich keine Klümpchen bilden.
+  - Verschlossen mindestens 4 Stunden, besser über Nacht, kalt stellen.
+  - Die Heidelbeeren im Kühlschrank auftauen lassen.
+  - Pudding mit Skyr und Beeren schichten.

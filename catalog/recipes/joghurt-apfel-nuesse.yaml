@@ -1,0 +1,21 @@
+id: joghurt-apfel-nuesse
+title: Joghurt mit Apfel, Walnüssen und Haferflocken
+description: Schnelle Frühstücksschale mit Naturjoghurt, frischem Apfel und gerösteten Nüssen.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: fresh }
+tags: [schnell, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/joghurt-mit-haferflocken-und-apfel
+ingredients:
+  - { ingredient: naturjoghurt, amount: 200, unit: g }
+  - { ingredient: haferflocken, amount: 40, unit: g }
+  - { ingredient: apfel, amount: 1, unit: stk }
+  - { ingredient: walnuesse, amount: 15, unit: g }
+  - { ingredient: honig, amount: 10, unit: g }
+steps:
+  - Apfel entkernen und klein würfeln.
+  - Walnüsse grob hacken und in einer Pfanne ohne Fett kurz rösten.
+  - Joghurt in eine Schale geben, Haferflocken, Apfel und Nüsse darauf verteilen und mit Honig beträufeln.

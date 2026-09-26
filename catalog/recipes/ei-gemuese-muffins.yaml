@@ -1,0 +1,27 @@
+id: ei-gemuese-muffins
+title: Ei-Gemüse-Muffins mit Vollkornbrot
+description: Herzhafte Muffins aus Ei, Quark, Paprika und Spinat – drei Stück plus eine Scheibe Brot sind ein Frühstück.
+servings: 4
+prepMinutes: 15
+cookMinutes: 25
+mealTypes: [breakfast]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [ofen, high-protein, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/herzhafte-gemusemuffins
+  - https://www.kitchenstories.com/de/rezepte/fruhstucksmuffins-4280
+ingredients:
+  - { ingredient: eier, amount: 8, unit: stk }
+  - { ingredient: magerquark, amount: 250, unit: g }
+  - { ingredient: gouda-gerieben, amount: 80, unit: g }
+  - { ingredient: paprika-rot, amount: 1, unit: stk }
+  - { ingredient: babyspinat, amount: 100, unit: g }
+  - { ingredient: fruehlingszwiebel, amount: 3, unit: stk }
+  - { ingredient: rapsoel, amount: 1, unit: tl }
+  - { ingredient: vollkornbrot, amount: 4, unit: stk }
+steps:
+  - Backofen auf 180 °C Umluft vorheizen und ein 12er-Muffinblech mit Öl auspinseln.
+  - Paprika fein würfeln, Frühlingszwiebeln in Ringe schneiden, Spinat grob hacken.
+  - Eier mit Quark glatt verquirlen, mit Salz und Pfeffer würzen, Gemüse und Käse unterheben.
+  - Masse auf die 12 Mulden verteilen und 20–25 Minuten backen, bis sie gestockt sind.
+  - Abkühlen lassen und je 3 Muffins mit einer Scheibe Vollkornbrot in eine Box packen.

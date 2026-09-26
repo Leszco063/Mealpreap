@@ -1,0 +1,20 @@
+id: huettenkaese-brot-tomate
+title: Hüttenkäse-Brot mit Tomate
+description: Vollkornbrot mit körnigem Frischkäse, Tomatenscheiben und einem Schuss Olivenöl.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/zutaten/huettenkaese-rezepte
+ingredients:
+  - { ingredient: vollkornbrot, amount: 2, unit: stk }
+  - { ingredient: koerniger-frischkaese, amount: 200, unit: g }
+  - { ingredient: tomaten, amount: 1, unit: stk }
+  - { ingredient: olivenoel, amount: 1, unit: tl }
+steps:
+  - Tomate in Scheiben schneiden.
+  - Brot dick mit körnigem Frischkäse bestreichen und mit Tomatenscheiben belegen.
+  - Mit Olivenöl beträufeln, salzen, pfeffern und nach Wunsch mit Basilikum bestreuen.

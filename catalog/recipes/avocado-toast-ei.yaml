@@ -1,0 +1,21 @@
+id: avocado-toast-ei
+title: Avocado-Toast mit Ei
+description: Knuspriger Vollkorntoast mit zerdrückter Avocado und zwei Spiegeleiern.
+servings: 1
+prepMinutes: 5
+cookMinutes: 5
+mealTypes: [breakfast]
+storage: { kind: fresh }
+tags: [schnell, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/avocado-toast-mit-ei
+ingredients:
+  - { ingredient: vollkorntoast, amount: 2, unit: stk }
+  - { ingredient: avocado, amount: 0.5, unit: stk }
+  - { ingredient: eier, amount: 2, unit: stk }
+  - { ingredient: zitrone, amount: 0.1, unit: stk, note: ein Spritzer Saft }
+steps:
+  - Toast rösten.
+  - Avocado mit einer Gabel zerdrücken, mit Zitronensaft, Salz und Pfeffer würzen.
+  - Eier in einer beschichteten Pfanne als Spiegeleier braten.
+  - Toast mit Avocado bestreichen, je ein Ei darauflegen und nach Wunsch mit Chiliflocken bestreuen.

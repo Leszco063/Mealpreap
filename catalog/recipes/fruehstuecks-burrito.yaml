@@ -1,0 +1,25 @@
+id: fruehstuecks-burrito
+title: Frühstücks-Burrito mit Ei und Bohnen
+description: Rührei mit Kidneybohnen und Käse im Wrap – einzeln eingewickelt ideal zum Vorbereiten und Einfrieren.
+servings: 4
+prepMinutes: 10
+cookMinutes: 15
+mealTypes: [breakfast, lunch]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [high-protein, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/fruehstuecks-burrito
+ingredients:
+  - { ingredient: kidneybohnen, amount: 255, unit: g, note: abgetropft }
+  - { ingredient: fruehlingszwiebel, amount: 5, unit: stk }
+  - { ingredient: eier, amount: 6, unit: stk }
+  - { ingredient: gouda-gerieben, amount: 100, unit: g }
+  - { ingredient: weizen-wraps, amount: 4, unit: stk }
+  - { ingredient: saure-sahne, amount: 100, unit: g }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+steps:
+  - Frühlingszwiebeln in Ringe schneiden, Bohnen abspülen und abtropfen lassen.
+  - Öl in einer großen Pfanne erhitzen, Frühlingszwiebeln 2 Minuten anbraten, Bohnen zugeben.
+  - Eier verquirlen, mit Salz, Pfeffer und etwas Cayennepfeffer würzen, in die Pfanne geben und langsam stocken lassen. Käse unterrühren.
+  - Wraps kurz erwärmen, mit saurer Sahne bestreichen, Füllung darauf verteilen und fest aufrollen.
+  - Zum Vorkochen einzeln in Backpapier oder Folie wickeln; zum Essen in der Pfanne oder Mikrowelle erwärmen.

@@ -1,0 +1,22 @@
+id: skyr-bowl-beeren
+title: Skyr-Bowl mit Beeren und Haferflocken
+description: Eiweißreiche Frühstücksschale aus Skyr, Erdbeeren, Haferflocken und Mandeln.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: fresh }
+tags: [schnell, high-protein, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/skyr-bowl
+  - https://eatsmarter.de/rezepte/skyr-mit-erdbeeren-und-haferflocken
+ingredients:
+  - { ingredient: skyr, amount: 250, unit: g }
+  - { ingredient: haferflocken, amount: 40, unit: g }
+  - { ingredient: erdbeeren-tk, amount: 100, unit: g }
+  - { ingredient: honig, amount: 10, unit: g }
+  - { ingredient: mandeln, amount: 10, unit: g }
+steps:
+  - Erdbeeren am Vorabend im Kühlschrank auftauen lassen oder kurz in der Mikrowelle antauen.
+  - Skyr mit Honig glatt rühren und in eine Schale geben.
+  - Mit Erdbeeren, Haferflocken und grob gehackten Mandeln belegen.

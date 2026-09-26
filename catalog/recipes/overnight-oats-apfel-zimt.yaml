@@ -1,0 +1,24 @@
+id: overnight-oats-apfel-zimt
+title: Overnight Oats Apfel-Zimt
+description: Cremige Haferflocken mit Skyr, Apfelstückchen und Walnüssen – abends vorbereitet, morgens fertig.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [ohne-kochen, high-protein, vegetarisch]
+sources:
+  - https://www.kitchenstories.com/de/rezepte/apfel-zimt-overnightoats-f8db
+  - https://eatsmarter.de/rezepte/overnight-oats-mit-aepfeln
+ingredients:
+  - { ingredient: haferflocken, amount: 50, unit: g }
+  - { ingredient: skyr, amount: 150, unit: g }
+  - { ingredient: milch-fettarm, amount: 100, unit: ml }
+  - { ingredient: apfel, amount: 0.5, unit: stk }
+  - { ingredient: chiasamen, amount: 5, unit: g }
+  - { ingredient: walnuesse, amount: 10, unit: g }
+steps:
+  - Haferflocken, Chiasamen, Skyr und Milch in einem Schraubglas verrühren und kräftig mit Zimt würzen.
+  - Den Apfel entkernen, klein würfeln und die Hälfte unterheben.
+  - Glas verschließen und über Nacht in den Kühlschrank stellen.
+  - Vor dem Essen mit den restlichen Apfelwürfeln und grob gehackten Walnüssen bestreuen.

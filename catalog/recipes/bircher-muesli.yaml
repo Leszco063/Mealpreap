@@ -1,0 +1,25 @@
+id: bircher-muesli
+title: Bircher Müsli
+description: Eingeweichte Haferflocken mit geriebenem Apfel, Joghurt und Walnüssen nach Schweizer Art.
+servings: 2
+prepMinutes: 10
+cookMinutes: 0
+mealTypes: [breakfast]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [ohne-kochen, vegetarisch]
+sources:
+  - https://eatsmarter.de/rezepte/bircher-muesli
+  - https://www.lecker.de/bircher-muesli-selber-machen-das-original-rezept-69869.html
+ingredients:
+  - { ingredient: haferflocken, amount: 80, unit: g }
+  - { ingredient: milch-fettarm, amount: 150, unit: ml }
+  - { ingredient: naturjoghurt, amount: 250, unit: g }
+  - { ingredient: apfel, amount: 2, unit: stk }
+  - { ingredient: zitrone, amount: 0.5, unit: stk }
+  - { ingredient: walnuesse, amount: 30, unit: g }
+  - { ingredient: honig, amount: 15, unit: g }
+steps:
+  - Haferflocken mit der Milch verrühren und über Nacht im Kühlschrank quellen lassen.
+  - Äpfel mit Schale grob reiben und sofort mit dem Saft der halben Zitrone mischen.
+  - Apfel, Joghurt und Honig unter die Haferflocken rühren.
+  - Auf zwei Gläser verteilen und mit gehackten Walnüssen bestreuen.
