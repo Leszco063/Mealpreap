@@ -12,7 +12,8 @@
     "bls:extract": "tsx tools/bls-extract.ts",
     "bls:search": "tsx tools/bls-search.ts",
     "catalog": "tsx tools/build-catalog.ts",
-    "catalog:check": "tsx tools/build-catalog.ts --check"
+    "catalog:check": "tsx tools/build-catalog.ts --check",
+    "verify": "npm run typecheck && npm run lint && npm test && npm run catalog:check && npm run build"
   },
   "dependencies": {
     "react": "^19.3.0",
