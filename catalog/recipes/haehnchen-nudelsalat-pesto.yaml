@@ -1,0 +1,24 @@
+id: haehnchen-nudelsalat-pesto
+title: Hähnchen-Nudelsalat mit Pesto
+description: Kalter Nudelsalat mit Basilikumpesto, Tomaten, Spinat und gebratenem Hähnchen – ideal fürs Büro.
+servings: 4
+prepMinutes: 15
+cookMinutes: 15
+mealTypes: [lunch]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/haehnchen-nudelsalat
+  - https://www.essen-und-trinken.de/rezepte/34326-rzpt-lauwarmer-nudel-haehnchen-salat
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 400, unit: g }
+  - { ingredient: nudeln, amount: 300, unit: g }
+  - { ingredient: pesto-genovese, amount: 120, unit: g }
+  - { ingredient: tomaten, amount: 250, unit: g }
+  - { ingredient: babyspinat, amount: 60, unit: g }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+steps:
+  - Nudeln bissfest garen, abgießen und sofort mit dem Pesto mischen.
+  - Hähnchen würfeln, salzen und in Öl 5–6 Minuten braten, abkühlen lassen.
+  - Tomaten würfeln, Spinat grob schneiden.
+  - Alles mit den abgekühlten Nudeln mischen, abschmecken und in Boxen füllen.

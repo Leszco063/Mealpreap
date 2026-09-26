@@ -1,0 +1,26 @@
+id: griechisches-zitronen-haehnchen
+title: Griechisches Zitronen-Hähnchen mit Kartoffeln
+description: Hähnchen und Kartoffeln mit Zitrone, Knoblauch und Oregano im Ofen gegart, dazu Joghurt-Gurken-Dip.
+servings: 4
+prepMinutes: 20
+cookMinutes: 40
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [ofen, high-protein]
+sources:
+  - https://www.kitchenstories.com/griechisches-zitronenhahnchen/146898
+  - https://eatsmarter.de/rezepte/haehnchen-vom-blech-griechische-art-1
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: kartoffeln, amount: 1000, unit: g }
+  - { ingredient: zitrone, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 4, unit: stk, note: Zehen }
+  - { ingredient: olivenoel, amount: 3, unit: el }
+  - { ingredient: naturjoghurt, amount: 150, unit: g }
+  - { ingredient: gurke, amount: 0.5, unit: stk }
+steps:
+  - Backofen auf 200 °C Umluft vorheizen.
+  - Kartoffeln schälen und in Spalten schneiden. Für die Marinade Zitronensaft, gepressten Knoblauch, Öl, Oregano, Salz und Pfeffer verrühren.
+  - Kartoffeln mit der Hälfte der Marinade auf einem Blech verteilen und 20 Minuten backen.
+  - Hähnchen in große Stücke schneiden, in der restlichen Marinade wenden, zu den Kartoffeln geben und 20 Minuten weiterbacken.
+  - Für den Dip die Gurke fein reiben, ausdrücken und mit Joghurt und Salz verrühren; separat verpacken.

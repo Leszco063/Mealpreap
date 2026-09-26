@@ -1,0 +1,26 @@
+id: haehnchen-reis-brokkoli-bowl
+title: Hähnchen-Reis-Bowl mit Brokkoli
+description: Der Mealprep-Klassiker – gebratenes Hähnchen mit Ingwer-Soja-Note, Basmatireis und Brokkoli.
+servings: 4
+prepMinutes: 15
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/haehnchen-reis-pfanne-mit-brokkoli-und-mais-0
+  - https://www.lecker.de/reis-mit-haehnchen-und-ei-deine-neue-lieblings-bowl-fuer-stressfreie-tage-132958.html
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: reis-basmati, amount: 280, unit: g }
+  - { ingredient: brokkoli, amount: 1, unit: stk }
+  - { ingredient: sojasauce, amount: 4, unit: el }
+  - { ingredient: rapsoel, amount: 2, unit: el }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: ingwer, amount: 10, unit: g }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Brokkoli in kleine Röschen teilen und 4 Minuten in Salzwasser garen, kalt abschrecken.
+  - Hähnchen in Würfel schneiden, Knoblauch und Ingwer fein hacken.
+  - Öl in einer Pfanne erhitzen, Hähnchen 5–6 Minuten rundum braten, Knoblauch und Ingwer 1 Minute mitbraten und mit Sojasauce ablöschen.
+  - Reis, Brokkoli und Hähnchen auf vier Boxen verteilen und abgekühlt in den Kühlschrank stellen.

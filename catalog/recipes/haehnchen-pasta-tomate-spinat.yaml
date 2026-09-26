@@ -1,0 +1,27 @@
+id: haehnchen-pasta-tomate-spinat
+title: Hähnchen-Pasta mit Tomate und Spinat
+description: Nudeln in fruchtiger Tomatensauce mit gebratenem Hähnchen, Spinat und etwas Parmesan.
+servings: 4
+prepMinutes: 10
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/nudeln-mit-spinat-tomaten-und-haehnchenfleisch
+  - https://www.essen-und-trinken.de/rezepte/57490-rzpt-haehnchen-pasta-allarrabbiata
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 500, unit: g }
+  - { ingredient: nudeln, amount: 320, unit: g }
+  - { ingredient: tomaten-gehackt, amount: 800, unit: g }
+  - { ingredient: babyspinat, amount: 150, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: olivenoel, amount: 2, unit: el }
+  - { ingredient: hartkaese-grana, amount: 40, unit: g }
+steps:
+  - Nudeln nach Packungsangabe bissfest garen.
+  - Hähnchen würfeln, Zwiebel und Knoblauch fein hacken.
+  - Hähnchen in 1 EL Öl 5 Minuten braten und herausnehmen. Im restlichen Öl Zwiebel und Knoblauch andünsten.
+  - Tomaten zugeben, mit Salz, Pfeffer, Oregano und einer Prise Zucker würzen und 10 Minuten köcheln lassen.
+  - Spinat und Hähnchen unterheben, Nudeln untermischen und mit geriebenem Hartkäse bestreut auf Boxen verteilen.

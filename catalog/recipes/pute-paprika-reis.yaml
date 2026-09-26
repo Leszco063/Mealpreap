@@ -1,0 +1,26 @@
+id: pute-paprika-reis
+title: Paprika-Puten-Reis aus einem Topf
+description: Pute, Paprika und Reis garen zusammen in Tomaten und Brühe – wenig Abwasch, viel Eiweiß.
+servings: 4
+prepMinutes: 15
+cookMinutes: 25
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [one-pot, high-protein]
+sources:
+  - https://www.essen-und-trinken.de/rezepte/56139-rzpt-paprika-puten-reis
+  - https://www.lecker.de/paprika-puten-reis-36701.html
+ingredients:
+  - { ingredient: putenbrust, amount: 600, unit: g }
+  - { ingredient: paprika-rot, amount: 3, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: reis-parboiled, amount: 280, unit: g }
+  - { ingredient: tomaten-gehackt, amount: 400, unit: g }
+  - { ingredient: gemuesebruehe, amount: 5, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Pute in 3 cm große Stücke, Paprika in Streifen schneiden, Zwiebel und Knoblauch fein hacken.
+  - Fleisch in heißem Öl rundum hellbraun anbraten, Zwiebel, Knoblauch und Paprika 2 Minuten mitbraten.
+  - Mit Paprikapulver würzen, Reis, Tomaten, Brühpulver und 500 ml Wasser zugeben.
+  - Aufkochen und zugedeckt bei kleiner Hitze 18–20 Minuten garen, bis der Reis weich ist. Abschmecken und portionieren.

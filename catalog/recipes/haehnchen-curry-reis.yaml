@@ -1,0 +1,28 @@
+id: haehnchen-curry-reis
+title: Hähnchen-Curry mit Reis
+description: Cremiges Kokos-Curry mit Hähnchen, Tomaten und Spinat – schmeckt aufgewärmt fast noch besser.
+servings: 4
+prepMinutes: 15
+cookMinutes: 30
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [one-pot, high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/kokos-haehnchen-curry-2
+  - https://www.lecker.de/haehnchencurry-kokosmilch-10695.html
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: ingwer, amount: 15, unit: g }
+  - { ingredient: kokosmilch, amount: 400, unit: ml }
+  - { ingredient: tomaten-gehackt, amount: 400, unit: g }
+  - { ingredient: babyspinat, amount: 100, unit: g }
+  - { ingredient: reis-basmati, amount: 280, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Zwiebel, Knoblauch und Ingwer fein hacken, Hähnchen in mundgerechte Stücke schneiden.
+  - Öl in einem Topf erhitzen, Zwiebel glasig dünsten, Knoblauch, Ingwer und 2 EL Currypulver kurz mitrösten.
+  - Hähnchen zugeben und 3 Minuten anbraten, dann Kokosmilch und Tomaten einrühren und 15 Minuten köcheln lassen.
+  - Spinat unterheben, bis er zusammenfällt, mit Salz abschmecken und mit dem Reis auf Boxen verteilen.

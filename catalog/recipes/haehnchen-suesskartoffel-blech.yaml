@@ -1,0 +1,25 @@
+id: haehnchen-suesskartoffel-blech
+title: Hähnchen mit Süßkartoffeln vom Blech
+description: Alles auf einem Blech – Hähnchen, Süßkartoffelwürfel und Brokkoli, dazu ein Joghurt-Knoblauch-Dip.
+servings: 4
+prepMinutes: 15
+cookMinutes: 30
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [ofen, high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/ofensuesskartoffeln-mit-haehnchenunterkeulen
+  - https://www.essen-und-trinken.de/rezepte/knoblauch-limetten-haehnchen-mit-suesskartoffeln-14087298.html
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: suesskartoffel, amount: 3, unit: stk }
+  - { ingredient: brokkoli, amount: 1, unit: stk }
+  - { ingredient: olivenoel, amount: 3, unit: el }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: naturjoghurt, amount: 200, unit: g }
+steps:
+  - Backofen auf 200 °C Umluft vorheizen.
+  - Süßkartoffeln schälen und in 2 cm große Würfel schneiden, mit 2 EL Öl, Salz und Paprikapulver mischen und 15 Minuten auf dem Blech rösten.
+  - Hähnchen in große Würfel schneiden, Brokkoli in Röschen teilen, beides mit dem restlichen Öl, Salz und Pfeffer mischen.
+  - Hähnchen und Brokkoli zu den Süßkartoffeln geben und weitere 15 Minuten backen, bis das Hähnchen durchgegart ist.
+  - Joghurt mit einer gepressten Knoblauchzehe und Salz verrühren und separat verpacken.

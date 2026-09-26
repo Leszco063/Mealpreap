@@ -1,0 +1,29 @@
+id: teriyaki-haehnchen-gemuese
+title: Teriyaki-Hähnchen mit Gemüse und Reis
+description: Süß-salzig glasiertes Hähnchen mit knackiger Paprika und Karotte auf Basmatireis.
+servings: 4
+prepMinutes: 15
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/teriyaki-haehnchen
+  - https://www.essen-und-trinken.de/rezepte/chicken-teriyaki-12095738.html
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: sojasauce, amount: 6, unit: el }
+  - { ingredient: honig, amount: 30, unit: g }
+  - { ingredient: ingwer, amount: 10, unit: g }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: paprika-rot, amount: 2, unit: stk }
+  - { ingredient: karotte, amount: 2, unit: stk }
+  - { ingredient: fruehlingszwiebel, amount: 3, unit: stk }
+  - { ingredient: reis-basmati, amount: 280, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Für die Sauce Sojasauce, Honig, geriebenen Ingwer, gepressten Knoblauch und 4 EL Wasser verrühren.
+  - Hähnchen in Streifen, Paprika in Stücke, Karotten in dünne Scheiben und Frühlingszwiebeln in Ringe schneiden.
+  - Hähnchen in heißem Öl 5 Minuten braten, Gemüse zugeben und 4 Minuten mitbraten.
+  - Sauce angießen und 2 Minuten einkochen lassen, bis alles glänzt. Mit Reis auf Boxen verteilen und mit Frühlingszwiebeln bestreuen.

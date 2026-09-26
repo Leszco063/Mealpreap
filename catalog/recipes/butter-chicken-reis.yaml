@@ -1,0 +1,28 @@
+id: butter-chicken-reis
+title: Butter Chicken mit Reis (leichte Variante)
+description: In Joghurt mariniertes Hähnchen in einer milden Tomaten-Sahne-Sauce – mit weniger Butter und Sahne als im Original.
+servings: 4
+prepMinutes: 20
+cookMinutes: 30
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/butter-chicken-mit-joghurt
+  - https://www.kitchenstories.com/de/rezepte/butter-chicken-55f6
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: joghurt-fettarm, amount: 250, unit: g }
+  - { ingredient: tomaten-passiert, amount: 500, unit: ml }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 3, unit: stk, note: Zehen }
+  - { ingredient: ingwer, amount: 15, unit: g }
+  - { ingredient: butter, amount: 20, unit: g }
+  - { ingredient: schlagsahne, amount: 100, unit: ml }
+  - { ingredient: reis-basmati, amount: 280, unit: g }
+steps:
+  - Hähnchen würfeln und mit dem Joghurt, 2 TL Garam Masala oder Currypulver und etwas Salz mindestens 30 Minuten marinieren.
+  - Reis nach Packungsangabe garen.
+  - Zwiebel, Knoblauch und Ingwer fein hacken und in der Butter 5 Minuten weich dünsten.
+  - Passierte Tomaten zugeben und 10 Minuten köcheln lassen, dann das Hähnchen samt Marinade einrühren und 10 Minuten garen.
+  - Sahne einrühren, abschmecken und mit dem Reis auf Boxen verteilen.

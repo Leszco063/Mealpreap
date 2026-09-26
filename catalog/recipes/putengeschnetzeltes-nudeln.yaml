@@ -1,0 +1,28 @@
+id: putengeschnetzeltes-nudeln
+title: Putengeschnetzeltes mit Champignons und Bandnudeln
+description: Zartes Putenfleisch in einer leichten Frischkäse-Champignon-Sauce mit Bandnudeln.
+servings: 4
+prepMinutes: 15
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [high-protein]
+sources:
+  - https://www.lecker.de/putengeschnetzeltes-mit-champignons-erbsen-und-bandnudeln-37473.html
+  - https://www.lecker.de/putengeschnetzeltes-11860.html
+ingredients:
+  - { ingredient: putenbrust, amount: 600, unit: g }
+  - { ingredient: champignons, amount: 400, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: frischkaese, amount: 150, unit: g }
+  - { ingredient: milch-fettarm, amount: 200, unit: ml }
+  - { ingredient: gemuesebruehe, amount: 5, unit: g }
+  - { ingredient: bandnudeln, amount: 320, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+  - { ingredient: petersilie, amount: 10, unit: g }
+steps:
+  - Bandnudeln nach Packungsangabe bissfest garen.
+  - Pute in Streifen, Champignons in Scheiben, Zwiebel in Würfel schneiden.
+  - Fleisch in heißem Öl portionsweise 3 Minuten anbraten und herausnehmen.
+  - Zwiebel und Champignons 5 Minuten braten, mit Milch und 100 ml Wasser ablöschen, Brühpulver und Frischkäse einrühren und 3 Minuten köcheln.
+  - Fleisch wieder zugeben, mit Salz und Pfeffer abschmecken, Petersilie unterheben und mit den Nudeln auf Boxen verteilen.

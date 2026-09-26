@@ -1,0 +1,27 @@
+id: haehnchen-gemuese-couscous
+title: Hähnchen-Gemüse-Pfanne mit Couscous
+description: Schnelle Pfanne mit Zucchini, Paprika und Hähnchen, dazu Zitronen-Couscous.
+servings: 4
+prepMinutes: 15
+cookMinutes: 15
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [schnell, high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/haehnchen-gemuese-pfanne-mit-couscous
+  - https://www.lecker.de/couscous-mit-haehnchen-gemuese-62085.html
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: couscous, amount: 250, unit: g }
+  - { ingredient: zucchini, amount: 2, unit: stk }
+  - { ingredient: paprika-rot, amount: 1, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: olivenoel, amount: 2, unit: el }
+  - { ingredient: gemuesebruehe, amount: 5, unit: g }
+  - { ingredient: zitrone, amount: 0.5, unit: stk }
+steps:
+  - Brühpulver in 300 ml kochendem Wasser auflösen, über den Couscous gießen, abdecken und 5 Minuten quellen lassen. Mit Zitronensaft und einer Gabel auflockern.
+  - Hähnchen, Zucchini, Paprika und Zwiebel in mundgerechte Stücke schneiden.
+  - Hähnchen in 1 EL Öl 5 Minuten braten und herausnehmen.
+  - Gemüse im restlichen Öl 6 Minuten braten, Hähnchen zugeben, mit Salz, Pfeffer und Paprikapulver würzen.
+  - Mit dem Couscous auf Boxen verteilen.

@@ -1,0 +1,28 @@
+id: haehnchen-fajita-bowl
+title: Hähnchen-Fajita-Bowl
+description: Würziges Paprika-Hähnchen mit Reis, Kidneybohnen und Mais – saure Sahne kommt separat dazu.
+servings: 4
+prepMinutes: 15
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/haehnchen-bowl
+  - https://www.kitchenstories.com/mexikanische-streetfood-mais-hahnchen-bowl/149334
+ingredients:
+  - { ingredient: haehnchenbrust, amount: 600, unit: g }
+  - { ingredient: paprika-rot, amount: 2, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: kidneybohnen, amount: 255, unit: g, note: abgetropft }
+  - { ingredient: mais, amount: 285, unit: g, note: abgetropft }
+  - { ingredient: reis-basmati, amount: 240, unit: g }
+  - { ingredient: saure-sahne, amount: 100, unit: g }
+  - { ingredient: olivenoel, amount: 2, unit: el }
+  - { ingredient: zitrone, amount: 0.5, unit: stk }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Hähnchen in Streifen schneiden und mit Paprikapulver, Kreuzkümmel, Salz und Pfeffer würzen.
+  - Paprika und Zwiebel in Streifen schneiden. Hähnchen in Öl 5 Minuten braten, Gemüse zugeben und 5 Minuten weiterbraten.
+  - Bohnen und Mais abspülen und mit Zitronensaft und Salz mischen.
+  - Reis, Bohnen-Mais und Fajita-Pfanne auf Boxen verteilen; saure Sahne in einem kleinen Extra-Döschen dazupacken.
