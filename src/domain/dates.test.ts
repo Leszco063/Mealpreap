@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { addDays, cookDayRanges, diffDays, isoWeekday, weekDates } from './dates';
+import { addDays, cookDayRanges, diffDays, isoWeekday, startOfWeek, todayLocal, weekDates } from './dates';
 
 describe('dates', () => {
   it('addDays über Monats- und Jahresgrenzen', () => {
@@ -63,5 +63,20 @@ describe('dates', () => {
     expect(cookDayRanges('2026-09-28', [])).toEqual([
       { cookDate: null, from: '2026-09-28', to: '2026-10-04' },
     ]);
+  });
+});
+
+describe('startOfWeek / todayLocal', () => {
+  it('Montag als Wochenstart', () => {
+    expect(startOfWeek('2026-09-30')).toBe('2026-09-28');
+    expect(startOfWeek('2026-09-28')).toBe('2026-09-28');
+    expect(startOfWeek('2026-10-04')).toBe('2026-09-28');
+  });
+  it('Sonntag als Wochenstart', () => {
+    expect(startOfWeek('2026-09-30', 7)).toBe('2026-09-27');
+  });
+  it('todayLocal nutzt lokale Zeit', () => {
+    expect(todayLocal(new Date(2026, 8, 26, 23, 30))).toBe('2026-09-26');
+    expect(todayLocal(new Date(2026, 0, 5, 0, 5))).toBe('2026-01-05');
   });
 });

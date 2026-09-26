@@ -62,3 +62,16 @@ export function cookDayRanges(weekStart: IsoDate, cookWeekdays: readonly number[
   });
   return ranges;
 }
+
+/** Erster Tag der Woche, in der d liegt (1 = Montag … 7 = Sonntag als Wochenstart) */
+export function startOfWeek(d: IsoDate, weekStartsOn = 1): IsoDate {
+  const diff = (isoWeekday(d) - weekStartsOn + 7) % 7;
+  return addDays(d, -diff);
+}
+
+/** Heutiges Datum in der lokalen Zeitzone des Geräts */
+export function todayLocal(now: Date = new Date()): IsoDate {
+  const m = String(now.getMonth() + 1).padStart(2, '0');
+  const d = String(now.getDate()).padStart(2, '0');
+  return `${now.getFullYear()}-${m}-${d}`;
+}
