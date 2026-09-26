@@ -1,0 +1,17 @@
+id: overnight-oats
+title: Overnight Oats mit Quark
+description: Proteinreiches Frühstück, abends in 5 Minuten vorbereitet.
+servings: 1
+prepMinutes: 5
+cookMinutes: 0
+mealTypes: [breakfast, snack]
+storage: { kind: prep, fridgeDays: 2, freezable: false }
+tags: [ohne-kochen, high-protein]
+ingredients:
+  - { ingredient: haferflocken, amount: 50, unit: g }
+  - { ingredient: magerquark, amount: 150, unit: g }
+  - { ingredient: milch-fettarm, amount: 100, unit: ml }
+steps:
+  - Haferflocken, Quark und Milch in einem Glas mit Deckel glatt verrühren.
+  - Verschlossen über Nacht in den Kühlschrank stellen.
+  - Morgens nach Wunsch mit Obst toppen.

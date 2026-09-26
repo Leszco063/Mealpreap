@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "test": "vitest run",
     "bls:extract": "tsx tools/bls-extract.ts",
-    "bls:search": "tsx tools/bls-search.ts"
+    "bls:search": "tsx tools/bls-search.ts",
+    "catalog": "tsx tools/build-catalog.ts",
+    "catalog:check": "tsx tools/build-catalog.ts --check"
   },
   "dependencies": {
     "react": "^19.3.0",

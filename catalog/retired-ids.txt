@@ -1,0 +1,1 @@
+# Bewusst entfernte Katalog-IDs, eine pro Zeile (z. B. zutat:alte-id oder rezept:alte-id)

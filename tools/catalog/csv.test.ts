@@ -15,7 +15,7 @@ describe('parseNumber', () => {
 describe('parseIngredientsCsv', () => {
   it('liest Excel-typische Datei mit BOM, CRLF, Dezimalkomma, Umlauten', () => {
     const text =
-      '﻿' +
+      '\uFEFF' +
       [
         HEADER,
         '# Kommentar',

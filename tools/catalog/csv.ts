@@ -57,7 +57,7 @@ function parsePackages(s: string): { sizeG: number; priceEur: number }[] {
 }
 
 export function parseIngredientsCsv(text: string): { rows: IngredientRow[]; errors: string[] } {
-  const lines = text.replace(/^﻿/, '').split(/\r?\n/);
+  const lines = text.replace(/^\uFEFF/, '').split(/\r?\n/);
   const header = (lines[0] ?? '').split(';').map((s) => s.trim());
   if (header.join(';') !== CSV_COLUMNS.join(';')) {
     return { rows: [], errors: [`ingredients.csv: Kopfzeile muss lauten: ${CSV_COLUMNS.join(';')}`] };

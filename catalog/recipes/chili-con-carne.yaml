@@ -1,0 +1,26 @@
+id: chili-con-carne
+title: Chili con Carne mit Reis
+description: Klassiker fürs Mealprep – hält 4 Tage im Kühlschrank und lässt sich gut einfrieren.
+servings: 4
+prepMinutes: 15
+cookMinutes: 35
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 4, freezable: true }
+tags: [one-pot, high-protein]
+ingredients:
+  - { ingredient: rinderhack, amount: 500, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: paprika-rot, amount: 2, unit: stk }
+  - { ingredient: tomaten-passiert, amount: 500, unit: ml }
+  - { ingredient: kidneybohnen, amount: 250, unit: g, note: abgetropft }
+  - { ingredient: reis-parboiled, amount: 250, unit: g }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+  - { ingredient: salz, amount: 1, unit: tl }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Zwiebel und Knoblauch fein würfeln, Paprika in mundgerechte Stücke schneiden.
+  - Öl in einem großen Topf erhitzen und das Hackfleisch darin krümelig anbraten.
+  - Zwiebel, Knoblauch und Paprika zugeben und 3 Minuten mitbraten.
+  - Passierte Tomaten und Bohnen einrühren, salzen, nach Geschmack mit Chili und Kreuzkümmel würzen und 20 Minuten köcheln lassen.
+  - Mit dem Reis auf Boxen verteilen, offen abkühlen lassen und dann verschlossen in den Kühlschrank stellen.
