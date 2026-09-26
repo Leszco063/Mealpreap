@@ -1,0 +1,28 @@
+id: spaghetti-bolognese
+title: Spaghetti Bolognese
+description: Kräftige Hackfleischsauce mit Karotte und Tomaten – die Sauce lässt sich prima auf Vorrat kochen und einfrieren.
+servings: 4
+prepMinutes: 15
+cookMinutes: 45
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [klassiker]
+sources:
+  - https://www.lecker.de/spaghetti-bolognese-klassisch-mit-gemischtem-hack-und-suppengruen-41615.html
+  - https://www.essen-und-trinken.de/rezepte/bolognese-sauce-12077308.html
+ingredients:
+  - { ingredient: hackfleisch-gemischt, amount: 500, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: karotte, amount: 2, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: tomatenmark, amount: 30, unit: g }
+  - { ingredient: tomaten-gehackt, amount: 800, unit: g }
+  - { ingredient: nudeln, amount: 360, unit: g, note: Spaghetti }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+  - { ingredient: hartkaese-grana, amount: 30, unit: g }
+steps:
+  - Zwiebel, Karotten und Knoblauch sehr fein würfeln.
+  - Hackfleisch in heißem Öl krümelig anbraten, Gemüse zugeben und 5 Minuten mitbraten.
+  - Tomatenmark einrühren und kurz anrösten, dann die Tomaten und 100 ml Wasser zugeben.
+  - Mit Salz, Pfeffer, Oregano und einer Prise Zucker würzen und zugedeckt mindestens 30 Minuten leise köcheln lassen.
+  - Spaghetti bissfest garen und mit der Sauce und geriebenem Hartkäse auf Boxen verteilen.

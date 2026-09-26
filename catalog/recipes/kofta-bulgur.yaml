@@ -1,0 +1,28 @@
+id: kofta-bulgur
+title: Köfte mit Bulgur und Joghurt
+description: Gewürzte Rinderhack-Köfte mit Petersilie, dazu Tomaten-Bulgur, Gurke und Joghurt.
+servings: 4
+prepMinutes: 25
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/koefte-mit-bulgursalat
+  - https://www.kitchenstories.com/de/rezepte/orientalische-hackballchen-mit-bulgur-6ccf
+ingredients:
+  - { ingredient: rinderhack, amount: 500, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: petersilie, amount: 20, unit: g }
+  - { ingredient: eier, amount: 1, unit: stk }
+  - { ingredient: bulgur, amount: 250, unit: g }
+  - { ingredient: tomaten, amount: 2, unit: stk }
+  - { ingredient: gurke, amount: 0.5, unit: stk }
+  - { ingredient: naturjoghurt, amount: 200, unit: g }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+steps:
+  - Bulgur mit 500 ml kochendem Salzwasser übergießen, abdecken und 15 Minuten quellen lassen.
+  - Zwiebel fein reiben, Petersilie hacken. Hack mit Zwiebel, der Hälfte der Petersilie, Ei, Kreuzkümmel, Paprikapulver, Salz und Pfeffer verkneten und zu 16 länglichen Köfte formen.
+  - Köfte in Öl rundum 8–10 Minuten braten.
+  - Tomaten und Gurke würfeln und mit restlicher Petersilie unter den Bulgur mischen.
+  - Köfte mit Bulgur portionieren; Joghurt mit Salz verrühren und separat verpacken.

@@ -1,0 +1,26 @@
+id: kartoffel-hack-auflauf
+title: Kartoffel-Hack-Auflauf
+description: Kartoffelscheiben, Hackfleisch-Tomaten-Sauce und Karotten, überbacken mit Gouda.
+servings: 4
+prepMinutes: 25
+cookMinutes: 40
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [ofen, klassiker]
+sources:
+  - https://www.lecker.de/kartoffel-hack-auflauf-mit-gemuese-31683.html
+  - https://eatsmarter.de/rezepte/kartoffel-hackfleisch-auflauf
+ingredients:
+  - { ingredient: kartoffeln, amount: 800, unit: g }
+  - { ingredient: hackfleisch-gemischt, amount: 400, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: karotte, amount: 2, unit: stk }
+  - { ingredient: tomaten-gehackt, amount: 400, unit: g }
+  - { ingredient: milch-fettarm, amount: 250, unit: ml }
+  - { ingredient: gouda-gerieben, amount: 100, unit: g }
+steps:
+  - Kartoffeln schälen, in Scheiben schneiden und 8 Minuten in Salzwasser vorgaren.
+  - Zwiebel und Karotten würfeln, mit dem Hackfleisch anbraten, Tomaten zugeben, würzen und 10 Minuten köcheln lassen.
+  - Backofen auf 180 °C Umluft vorheizen. Kartoffeln und Hacksauce in eine Auflaufform schichten.
+  - Milch mit Salz, Pfeffer und Muskat verquirlen, darübergießen und mit Käse bestreuen.
+  - 30 Minuten goldbraun backen.

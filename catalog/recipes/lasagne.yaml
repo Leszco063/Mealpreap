@@ -1,0 +1,29 @@
+id: lasagne
+title: Lasagne
+description: Klassische Lasagne mit Hackfleisch-Tomaten-Sauce, Béchamel und Käsekruste – ein Blech für sechs Portionen.
+servings: 6
+prepMinutes: 30
+cookMinutes: 60
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 4, freezable: true }
+tags: [ofen, klassiker]
+sources:
+  - https://www.lecker.de/lasagne-rezept-bolognese-63203.html
+  - https://www.essen-und-trinken.de/rezepte/36396-rzpt-lasagne-alla-bolognese
+ingredients:
+  - { ingredient: hackfleisch-gemischt, amount: 500, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: tomaten-gehackt, amount: 800, unit: g }
+  - { ingredient: tomatenmark, amount: 30, unit: g }
+  - { ingredient: lasagneblaetter, amount: 250, unit: g }
+  - { ingredient: butter, amount: 40, unit: g }
+  - { ingredient: weizenmehl, amount: 40, unit: g }
+  - { ingredient: milch-voll, amount: 600, unit: ml }
+  - { ingredient: gouda-gerieben, amount: 100, unit: g }
+steps:
+  - Zwiebel und Knoblauch fein würfeln, Hackfleisch krümelig anbraten, Zwiebel und Knoblauch mitbraten.
+  - Tomatenmark anrösten, Tomaten zugeben, mit Salz, Pfeffer und Oregano würzen und 15 Minuten köcheln lassen.
+  - Für die Béchamel Butter schmelzen, Mehl einrühren, nach und nach die Milch zugießen und 5 Minuten köcheln lassen. Mit Salz und Muskat würzen.
+  - Backofen auf 180 °C Umluft vorheizen. In einer Auflaufform abwechselnd Béchamel, Lasagneplatten und Hacksauce schichten, mit Béchamel abschließen und mit Käse bestreuen.
+  - 35–40 Minuten goldbraun backen, 15 Minuten ruhen lassen und in sechs Stücke schneiden.

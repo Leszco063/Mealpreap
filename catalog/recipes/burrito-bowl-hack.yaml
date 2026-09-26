@@ -1,0 +1,28 @@
+id: burrito-bowl-hack
+title: Burrito-Bowl mit Hackfleisch
+description: Würziges Rinderhack mit Reis, Kidneybohnen, Mais, Tomate und Käse – wie ein Burrito ohne Wrap.
+servings: 4
+prepMinutes: 15
+cookMinutes: 20
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/mexikanische-burritos-mit-hack
+  - https://eatsmarter.de/rezepte/mexikanischer-reis-hack-topf-mit-avocado-und-bohnen
+ingredients:
+  - { ingredient: rinderhack, amount: 500, unit: g }
+  - { ingredient: reis-basmati, amount: 240, unit: g }
+  - { ingredient: kidneybohnen, amount: 255, unit: g, note: abgetropft }
+  - { ingredient: mais, amount: 285, unit: g, note: abgetropft }
+  - { ingredient: tomaten, amount: 2, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: saure-sahne, amount: 100, unit: g }
+  - { ingredient: gouda-gerieben, amount: 60, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Zwiebel würfeln, Hackfleisch in Öl krümelig braten, Zwiebel mitbraten und mit Kreuzkümmel, Paprikapulver, Chili und Salz würzen.
+  - Bohnen und Mais abspülen, zum Hack geben und 3 Minuten mit erhitzen.
+  - Tomaten würfeln.
+  - Reis, Hack-Bohnen-Mischung, Tomaten und Käse auf Boxen verteilen; saure Sahne separat einpacken.

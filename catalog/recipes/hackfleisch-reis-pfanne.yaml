@@ -1,0 +1,27 @@
+id: hackfleisch-reis-pfanne
+title: Hackfleisch-Reis-Pfanne mit Gemüse
+description: Rinderhack, Reis, Paprika und Erbsen garen zusammen in einer Pfanne – schnell und sättigend.
+servings: 4
+prepMinutes: 10
+cookMinutes: 25
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [one-pot, high-protein]
+sources:
+  - https://www.essen-und-trinken.de/rezepte/reis-hackfleisch-pfanne-fertig-in-35-minuten-13601942.html
+  - https://eatsmarter.de/rezepte/hackfleisch-reis-pfanne-mit-gemuese-1
+ingredients:
+  - { ingredient: rinderhack, amount: 500, unit: g }
+  - { ingredient: reis-parboiled, amount: 250, unit: g }
+  - { ingredient: paprika-rot, amount: 2, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: erbsen-tk, amount: 150, unit: g }
+  - { ingredient: tomatenmark, amount: 30, unit: g }
+  - { ingredient: gemuesebruehe, amount: 5, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Paprika und Zwiebel klein würfeln.
+  - Hackfleisch in heißem Öl hellbraun anbraten, Paprika und Zwiebel 3 Minuten mitbraten.
+  - Tomatenmark und Reis kurz mitrösten, mit Salz, Paprikapulver und Cayennepfeffer würzen.
+  - Brühpulver und 600 ml Wasser zugeben, aufkochen und zugedeckt 15 Minuten garen.
+  - Erbsen unterrühren, 2 Minuten mitgaren, abschmecken und portionieren.

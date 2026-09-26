@@ -1,11 +1,11 @@
 id: chili-con-carne
 title: Chili con Carne mit Reis
-description: Klassiker fürs Mealprep – hält 4 Tage im Kühlschrank und lässt sich gut einfrieren.
+description: Klassiker fürs Mealprep – hält 3 Tage im Kühlschrank und lässt sich gut einfrieren.
 servings: 4
 prepMinutes: 15
 cookMinutes: 35
 mealTypes: [lunch, dinner]
-storage: { kind: prep, fridgeDays: 4, freezable: true }
+storage: { kind: prep, fridgeDays: 3, freezable: true }
 tags: [one-pot, high-protein]
 ingredients:
   - { ingredient: rinderhack, amount: 500, unit: g }

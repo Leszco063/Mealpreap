@@ -1,0 +1,29 @@
+id: asia-nudeln-rind
+title: Asia-Nudeln mit Rinderstreifen
+description: Gebratene Mie-Nudeln mit zarten Rinderstreifen, Paprika, Karotte und Ingwer-Soja-Sauce.
+servings: 4
+prepMinutes: 15
+cookMinutes: 15
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [schnell, high-protein]
+sources:
+  - https://eatsmarter.de/rezepte/gebratene-asiatische-nudeln-mit-rindfleischstreifen
+  - https://eatsmarter.de/rezepte/asiatische-rindfleisch-gemuesepfanne-mit-nudeln-0
+ingredients:
+  - { ingredient: rindersteak, amount: 600, unit: g }
+  - { ingredient: mie-nudeln, amount: 250, unit: g }
+  - { ingredient: paprika-rot, amount: 1, unit: stk }
+  - { ingredient: karotte, amount: 2, unit: stk }
+  - { ingredient: fruehlingszwiebel, amount: 4, unit: stk }
+  - { ingredient: sojasauce, amount: 5, unit: el }
+  - { ingredient: honig, amount: 15, unit: g }
+  - { ingredient: ingwer, amount: 10, unit: g }
+  - { ingredient: knoblauch, amount: 2, unit: stk, note: Zehen }
+  - { ingredient: rapsoel, amount: 2, unit: el }
+steps:
+  - Mie-Nudeln nach Packungsangabe garen, abgießen und kalt abspülen.
+  - Fleisch in dünne Streifen schneiden, Paprika und Karotten in Streifen, Frühlingszwiebeln in Ringe.
+  - Sojasauce, Honig, geriebenen Ingwer und gepressten Knoblauch verrühren.
+  - Fleisch in 1 EL heißem Öl 2 Minuten scharf anbraten und herausnehmen. Gemüse im restlichen Öl 3 Minuten braten.
+  - Nudeln, Fleisch und Sauce zugeben, 2 Minuten durchschwenken und portionieren.

@@ -70,3 +70,15 @@ frischkaese;Frischkäse natur;M710800;kuehlregal;;;300:1,59;2026-09-26;animal|da
 gemuesebruehe;Gemüsebrühe (Pulver);R821000;gewuerze-oele;;;290:2,85;2026-09-26;;celery;ja;;;;;;;
 hartkaese-grana;Hartkäse (Grana-Art, Parmesan);M306400;kuehlregal;;;200:2,99;2026-09-26;animal|dairy;milk;;;;;;;;
 schlagsahne;Schlagsahne;M173800;kuehlregal;1,0;;200:0,89;2026-09-26;animal|dairy;milk;;;;;;;;
+hackfleisch-gemischt;Hackfleisch gemischt (Rind/Schwein);U050100;fleisch-fisch;;;500:4,99|800:5,29;2026-09-26;animal|meat|pork;;;;;;;;;
+rindergulasch;Rindergulasch;U151100;fleisch-fisch;;;500:7,79;2026-09-26;animal|meat;;;;;;;;;
+schweineschnitzel;Schweineschnitzel;U541100;fleisch-fisch;;;400:2,99|500:4,59;2026-09-26;animal|meat|pork;;;;;;;;;
+rindersteak;Rinder-Minutensteak;U284100;fleisch-fisch;;;320:5,99;2026-09-26;animal|meat;;;;;;;;;
+bulgur;Bulgur;C119100;trockenware;;;500:1,29;2026-09-26;;gluten;;;;;;;;
+lasagneblaetter;Lasagneplatten;E401000;trockenware;;;500:1,19;2026-09-26;;gluten;;;;;;;;
+mie-nudeln;Mie-Nudeln;E432000;trockenware;;;250:0,89;2026-09-26;egg;gluten|egg;;;;;;;;
+milch-voll;Vollmilch 3,5 %;M111300;kuehlregal;1,03;;1030:0,95;2026-09-26;animal|dairy;milk;;;;;;;;
+paniermehl;Paniermehl;B821000;trockenware;;;200:0,59;2026-09-26;;gluten;;;;;;;;
+senf;Senf mittelscharf;R132000;gewuerze-oele;1,05;;210:0,69;2026-09-26;;mustard;;;;;;;;
+tomatenmark;Tomatenmark;R160000;konserven;;;200:0,89;2026-09-26;;;;;;;;;;
+erbsen-tk;Erbsen (TK);G760100;tiefkuehl;;;750:2,69;2026-09-26;;;;;;;;;;

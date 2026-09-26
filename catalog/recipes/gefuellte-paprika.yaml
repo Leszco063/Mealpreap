@@ -1,0 +1,26 @@
+id: gefuellte-paprika
+title: Gefüllte Paprika mit Hackfleisch und Reis
+description: Paprikaschoten mit Hack-Reis-Füllung in Tomatensauce, mit Käse überbacken.
+servings: 4
+prepMinutes: 20
+cookMinutes: 45
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [ofen, klassiker]
+sources:
+  - https://eatsmarter.de/rezepte/gefuellte-paprika-mit-hack-reis-fuellung
+  - https://www.kitchenstories.com/rezepte/gefullte-paprika-mit-hackfleisch
+ingredients:
+  - { ingredient: paprika-rot, amount: 4, unit: stk }
+  - { ingredient: hackfleisch-gemischt, amount: 400, unit: g }
+  - { ingredient: reis-parboiled, amount: 150, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: tomaten-passiert, amount: 500, unit: ml }
+  - { ingredient: gouda-gerieben, amount: 80, unit: g }
+  - { ingredient: olivenoel, amount: 1, unit: el }
+steps:
+  - Reis 10 Minuten vorgaren. Backofen auf 180 °C Umluft vorheizen.
+  - Zwiebel würfeln, mit dem Hackfleisch in Öl anbraten und mit Salz, Pfeffer und Paprikapulver würzen. Reis untermischen.
+  - Paprika der Länge nach halbieren und entkernen, mit der Hackmischung füllen.
+  - Passierte Tomaten würzen, in eine Auflaufform gießen, Paprikahälften hineinsetzen und mit Käse bestreuen.
+  - Zugedeckt 20 Minuten, dann offen 15 Minuten backen.

@@ -1,0 +1,28 @@
+id: schweineschnitzel-gemuesereis
+title: Schweineschnitzel-Streifen mit Gemüsereis
+description: Magere Schnitzelstreifen mit Zucchini, Paprika und Karotte in cremigem Gemüsereis.
+servings: 4
+prepMinutes: 15
+cookMinutes: 25
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: true }
+tags: [high-protein]
+sources:
+  - https://www.lecker.de/reispfanne-mit-schnitzelfleisch-43584.html
+  - https://www.essen-und-trinken.de/rezepte/50822-rzpt-schnitzel-reis-pfanne
+ingredients:
+  - { ingredient: schweineschnitzel, amount: 500, unit: g }
+  - { ingredient: reis-parboiled, amount: 280, unit: g }
+  - { ingredient: zucchini, amount: 1, unit: stk }
+  - { ingredient: paprika-rot, amount: 1, unit: stk }
+  - { ingredient: karotte, amount: 2, unit: stk }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: gemuesebruehe, amount: 5, unit: g }
+  - { ingredient: frischkaese, amount: 100, unit: g }
+  - { ingredient: rapsoel, amount: 1, unit: el }
+steps:
+  - Reis nach Packungsangabe garen.
+  - Fleisch in Streifen schneiden, Gemüse und Zwiebel klein würfeln.
+  - Fleisch in heißem Öl 4 Minuten rundum braten, salzen, pfeffern und herausnehmen.
+  - Gemüse 5 Minuten braten, Brühpulver, 150 ml Wasser und Frischkäse einrühren und kurz köcheln lassen.
+  - Fleisch und Reis unterheben, mit Thymian abschmecken und portionieren.

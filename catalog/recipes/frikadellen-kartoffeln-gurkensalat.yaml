@@ -1,0 +1,28 @@
+id: frikadellen-kartoffeln-gurkensalat
+title: Frikadellen mit Kartoffeln und Gurkensalat
+description: Hausgemachte Frikadellen mit Salzkartoffeln und einem frischen Joghurt-Gurkensalat.
+servings: 4
+prepMinutes: 25
+cookMinutes: 25
+mealTypes: [lunch, dinner]
+storage: { kind: prep, fridgeDays: 3, freezable: false }
+tags: [klassiker]
+sources:
+  - https://www.essen-und-trinken.de/rezepte/frikadellen-mit-gurken-radieschen-salat-1-12087482.html
+  - https://www.lecker.de/gurkensalat-mit-saurer-sahne-79661.html
+ingredients:
+  - { ingredient: hackfleisch-gemischt, amount: 500, unit: g }
+  - { ingredient: eier, amount: 1, unit: stk }
+  - { ingredient: paniermehl, amount: 40, unit: g }
+  - { ingredient: zwiebel, amount: 1, unit: stk }
+  - { ingredient: senf, amount: 10, unit: g }
+  - { ingredient: kartoffeln, amount: 800, unit: g }
+  - { ingredient: gurke, amount: 1, unit: stk }
+  - { ingredient: joghurt-fettarm, amount: 150, unit: g }
+  - { ingredient: rapsoel, amount: 2, unit: el }
+steps:
+  - Kartoffeln schälen und in Salzwasser 20 Minuten garen.
+  - Zwiebel fein würfeln, mit Hack, Ei, Paniermehl, Senf, Salz und Pfeffer verkneten und 8 Frikadellen formen.
+  - Frikadellen im Öl bei mittlerer Hitze von jeder Seite 5–6 Minuten braten.
+  - Gurke in dünne Scheiben hobeln, leicht salzen, ausdrücken und mit Joghurt, Pfeffer und etwas Dill mischen.
+  - Frikadellen mit Kartoffeln portionieren, Gurkensalat in einer separaten Dose.
