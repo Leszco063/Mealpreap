@@ -1,13 +1,13 @@
 id;name;blsCode;category;densityGPerMl;pieceWeightG;packages;priceAsOf;flags;allergens;pantryStaple;kcal;protein;fat;carbs;fiber;sugar;salt
 haferflocken;Haferflocken;C133000;trockenware;;;500:0,69;2026-09-26;;gluten;;;;;;;;
-magerquark;Magerquark;M713100;kuehlregal;;;250:0,79|500:1,29;2026-09-26;animal|dairy;milk;;;;;;;;
-milch-fettarm;Milch 1,5 %;M111200;kuehlregal;1,03;;1030:0,99;2026-09-26;animal|dairy;milk;;;;;;;;
-rinderhack;Rinderhackfleisch;U010100;fleisch-fisch;;;500:4,99;2026-09-26;animal|meat;;;;;;;;;
+magerquark;Magerquark;M713100;kuehlregal;;;250:0,69|500:1,19;2026-09-26;animal|dairy;milk;;;;;;;;
+milch-fettarm;Milch 1,5 %;M111200;kuehlregal;1,03;;1030:0,85;2026-09-26;animal|dairy;milk;;;;;;;;
+rinderhack;Rinderhackfleisch;U010100;fleisch-fisch;;;500:5,79|800:8,79;2026-09-26;animal|meat;;;;;;;;;
 zwiebel;Zwiebel;G480100;obst-gemuese;;80;1000:1,29;2026-09-26;;;;;;;;;;
 paprika-rot;Paprika rot;G543100;obst-gemuese;;150;500:1,99;2026-09-26;;;;;;;;;;
 knoblauch;Knoblauch;G490100;obst-gemuese;;4;150:0,99;2026-09-26;;;;;;;;;;
-tomaten-passiert;Passierte Tomaten;R161200;konserven;1,03;;500:0,79;2026-09-26;;;;;;;;;;
-kidneybohnen;Kidneybohnen (abgetropft);H742902;konserven;;;250:0,79;2026-09-26;;;;;;;;;;
-reis-parboiled;Reis parboiled;C359000;trockenware;;;1000:1,79;2026-09-26;;;;;;;;;;
-olivenoel;Olivenöl;Q120000;gewuerze-oele;0,92;;690:6,49;2026-09-26;;;;;;;;;;
+tomaten-passiert;Passierte Tomaten;R161200;konserven;1,03;;500:0,65;2026-09-26;;;;;;;;;;
+kidneybohnen;Kidneybohnen (Dose, abgetropft);H742902;konserven;;;255:0,69;2026-09-26;;;;;;;;;;
+reis-parboiled;Reis parboiled;C359000;trockenware;;;1000:1,39;2026-09-26;;;;;;;;;;
+olivenoel;Olivenöl;Q120000;gewuerze-oele;0,92;;690:5,99|920:7,99;2026-09-26;;;;;;;;;;
 salz;Salz (jodiert);R113000;gewuerze-oele;1,2;;500:0,29;2026-09-26;;;ja;;;;;;;
