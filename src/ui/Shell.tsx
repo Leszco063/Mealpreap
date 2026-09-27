@@ -1,6 +1,6 @@
 import { useRoute, go } from './router';
-import { Screen } from './components';
 import { RecipesScreen } from './screens/RecipesScreen';
+import { ShoppingScreen } from './screens/ShoppingScreen';
 import { RecipeDetailScreen } from './screens/RecipeDetailScreen';
 import { HouseholdScreen } from './screens/HouseholdScreen';
 import { WeekScreen } from './screens/WeekScreen';
@@ -24,12 +24,10 @@ export function Shell() {
           <RecipesScreen />
         ) : section === 'haushalt' ? (
           <HouseholdScreen />
-        ) : section === 'woche' ? (
-          <WeekScreen />
+        ) : section === 'einkauf' ? (
+          <ShoppingScreen />
         ) : (
-          <Screen title={TABS.find((t) => t.path === section)?.label ?? 'Mealprep'}>
-            <p className="text-stone-500">Dieser Bereich folgt gleich.</p>
-          </Screen>
+          <WeekScreen />
         )}
       </main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-stone-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-stone-800 dark:bg-stone-900/95">
