@@ -2,6 +2,7 @@ import { useRoute, go } from './router';
 import { Screen } from './components';
 import { RecipesScreen } from './screens/RecipesScreen';
 import { RecipeDetailScreen } from './screens/RecipeDetailScreen';
+import { HouseholdScreen } from './screens/HouseholdScreen';
 
 const TABS = [
   { path: 'woche', label: 'Woche', icon: '📅' },
@@ -20,6 +21,8 @@ export function Shell() {
           <RecipeDetailScreen key={route[1]} id={route[1]} />
         ) : section === 'rezepte' ? (
           <RecipesScreen />
+        ) : section === 'haushalt' ? (
+          <HouseholdScreen />
         ) : (
           <Screen title={TABS.find((t) => t.path === section)?.label ?? 'Mealprep'}>
             <p className="text-stone-500">Dieser Bereich folgt gleich.</p>
