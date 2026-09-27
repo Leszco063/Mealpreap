@@ -1,5 +1,7 @@
 import { useRoute, go } from './router';
 import { Screen } from './components';
+import { RecipesScreen } from './screens/RecipesScreen';
+import { RecipeDetailScreen } from './screens/RecipeDetailScreen';
 
 const TABS = [
   { path: 'woche', label: 'Woche', icon: '📅' },
@@ -14,9 +16,15 @@ export function Shell() {
   return (
     <div className="min-h-dvh bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100">
       <main>
-        <Screen title={TABS.find((t) => t.path === section)?.label ?? 'Mealprep'}>
-          <p className="text-stone-500">Dieser Bereich folgt gleich.</p>
-        </Screen>
+        {section === 'rezepte' && route[1] ? (
+          <RecipeDetailScreen key={route[1]} id={route[1]} />
+        ) : section === 'rezepte' ? (
+          <RecipesScreen />
+        ) : (
+          <Screen title={TABS.find((t) => t.path === section)?.label ?? 'Mealprep'}>
+            <p className="text-stone-500">Dieser Bereich folgt gleich.</p>
+          </Screen>
+        )}
       </main>
       <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-stone-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur dark:border-stone-800 dark:bg-stone-900/95">
         <ul className="mx-auto flex max-w-2xl">
