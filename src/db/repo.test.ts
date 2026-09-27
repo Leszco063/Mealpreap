@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { getRxStorageMemory } from 'rxdb/plugins/storage-memory';
 import { createMealprepDb, type MealprepDb } from './database';
-import { deletePerson, ensureHousehold, HOUSEHOLD_ID, saveMeal, savePerson, setChecked } from './repo';
+import { changePortion, deletePerson, ensureHousehold, HOUSEHOLD_ID, saveMeal, savePerson, setChecked, updateHousehold } from './repo';
 import type { Meal, Person } from '../domain/types';
 
 let db: MealprepDb;
@@ -74,11 +74,42 @@ describe('repo', () => {
     expect(await db.meals.findOne('m2').exec()).toBeNull();
   });
 
-  it('setChecked schreibt pro Woche und Zutat ein Dokument', async () => {
+  it('setChecked schreibt pro Einkaufsliste und Zutat ein Dokument', async () => {
     await freshDb();
-    await setChecked(db, '2026-09-28', 'zwiebel', true);
-    await setChecked(db, '2026-09-28', 'zwiebel', false);
+    await setChecked(db, '2026-09-28_2026-10-04', 'zwiebel', true);
+    await setChecked(db, '2026-09-28_2026-10-04', 'zwiebel', false);
+    await setChecked(db, '2026-09-30_2026-10-03', 'zwiebel', true);
     const docs = await db.shoppingchecks.find().exec();
-    expect(docs.map((d) => [d.id, d.checked])).toEqual([['2026-09-28:zwiebel', false]]);
+    expect(docs.map((d) => [d.id, d.checked]).sort()).toEqual([
+      ['2026-09-28_2026-10-04:zwiebel', false],
+      ['2026-09-30_2026-10-03:zwiebel', true],
+    ]);
+  });
+
+  it('changePortion verliert bei schnellen Klicks keine Änderung', async () => {
+    await freshDb();
+    await saveMeal(db, meal('m1', { a: 1, b: 1 }));
+    await Promise.all([changePortion(db, 'm1', 'a', 0.25), changePortion(db, 'm1', 'a', 0.25), changePortion(db, 'm1', 'b', -0.25)]);
+    expect((await db.meals.findOne('m1').exec())?.toMutableJSON().portions).toEqual({ a: 1.5, b: 0.75 });
+  });
+
+  it('changePortion auf 0 entfernt die Person aus der Mahlzeit', async () => {
+    await freshDb();
+    await saveMeal(db, meal('m1', { a: 0.25, b: 1 }));
+    await changePortion(db, 'm1', 'a', -0.25);
+    expect((await db.meals.findOne('m1').exec())?.toMutableJSON().portions).toEqual({ b: 1 });
+  });
+
+  it('updateHousehold verliert bei schnellen Änderungen nichts', async () => {
+    await freshDb();
+    await ensureHousehold(db);
+    await Promise.all([
+      updateHousehold(db, (h) => ({ ...h, cookDays: [...h.cookDays, 1] })),
+      updateHousehold(db, (h) => ({ ...h, cookDays: [...h.cookDays, 5] })),
+      updateHousehold(db, (h) => ({ ...h, weeklyBudgetEur: 90 })),
+    ]);
+    const h = (await db.households.findOne(HOUSEHOLD_ID).exec())?.toMutableJSON();
+    expect(h?.cookDays.sort()).toEqual([1, 3, 5, 7]);
+    expect(h?.weeklyBudgetEur).toBe(90);
   });
 });

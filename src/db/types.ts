@@ -14,10 +14,11 @@ export type PersonDoc = Person & { householdId: string; updatedAt: number };
 export type MealDoc = Meal & { householdId: string; updatedAt: number };
 
 export interface ShoppingCheckDoc {
-  /** `${weekStart}:${ingredientId}` */
+  /** `${listKey}:${ingredientId}` */
   id: string;
   householdId: string;
-  weekStart: string;
+  /** Zeitraum der Einkaufsliste, siehe listKey() */
+  listKey: string;
   ingredientId: string;
   checked: boolean;
   updatedAt: number;

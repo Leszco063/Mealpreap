@@ -90,10 +90,10 @@ export const shoppingCheckSchema: RxJsonSchema<ShoppingCheckDoc> = {
   properties: {
     id,
     householdId: { type: 'string' },
-    weekStart: { type: 'string' },
+    listKey: { type: 'string' },
     ingredientId: { type: 'string' },
     checked: { type: 'boolean' },
     updatedAt: { type: 'number' },
   },
-  required: ['id', 'householdId', 'weekStart', 'ingredientId', 'checked', 'updatedAt'],
+  required: ['id', 'householdId', 'listKey', 'ingredientId', 'checked', 'updatedAt'],
 };

@@ -3,8 +3,9 @@ import { CATEGORIES } from '../../domain/types';
 import { CATEGORY_LABEL } from '../../domain/labels';
 import { addDays, cookDayRanges, startOfWeek, todayLocal, weekDates } from '../../domain/dates';
 import { buildShoppingList } from '../../domain/shopping';
+import { shoppingMealRange } from '../../domain/plan';
 import { useChecks, useHousehold, useMeals } from '../../db/hooks';
-import { setChecked } from '../../db/repo';
+import { listKey, setChecked } from '../../db/repo';
 import { useApp } from '../context';
 import { Card, Chip, Screen } from '../components';
 import { fmtDay, fmtEur, fmtGram } from '../format';
@@ -21,12 +22,10 @@ export function ShoppingScreen() {
   const [dayIdx, setDayIdx] = useState(0);
   const weekEnd = addDays(weekStart, 6);
   // Mahlzeiten großzügig laden: gekocht in dieser Woche, gegessen ggf. danach
-  const meals = useMeals(db, weekStart, addDays(weekEnd, 7));
-  const checks = useChecks(db, weekStart);
+  const mealRange = shoppingMealRange(weekStart);
+  const meals = useMeals(db, mealRange.from, mealRange.to);
 
-  if (!household) return null;
-
-  const ranges = cookDayRanges(weekStart, household.cookDays);
+  const ranges = cookDayRanges(weekStart, household?.cookDays ?? []);
   const days = weekDates(weekStart);
   const selectedRange = ranges[Math.min(rangeIdx, ranges.length - 1)];
   const selectedDay = days[dayIdx] ?? weekStart;
@@ -36,6 +35,11 @@ export function ShoppingScreen() {
       : mode === 'kochtag' && selectedRange
         ? { from: selectedRange.from, to: selectedRange.to }
         : { from: selectedDay, to: selectedDay };
+  // Jede Liste (Woche, Kochtag, Tag) hat eigene Haken
+  const key = listKey(range.from, range.to);
+  const checks = useChecks(db, key);
+
+  if (!household) return null;
 
   const list = buildShoppingList(meals, { lookupIngredient, lookupRecipe }, range);
   const buy = list.items.filter((i) => !i.pantryStaple);
@@ -105,7 +109,7 @@ export function ShoppingScreen() {
                       type="checkbox"
                       className="h-5 w-5 accent-green-700"
                       checked={done}
-                      onChange={(e) => void setChecked(db, weekStart, i.ingredientId, e.target.checked)}
+                      onChange={(e) => void setChecked(db, key, i.ingredientId, e.target.checked)}
                     />
                     <span className={`flex-1 ${done ? 'text-stone-400 line-through' : ''}`}>
                       {i.name}

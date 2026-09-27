@@ -35,6 +35,13 @@ export async function saveHousehold(db: MealprepDb, household: Omit<HouseholdDoc
   await db.households.upsert({ ...household, updatedAt: Date.now() });
 }
 
+/** Ändert den Haushalt auf Basis des aktuell gespeicherten Stands – schnelle Klicks gehen nicht verloren. */
+export async function updateHousehold(db: MealprepDb, change: (h: HouseholdDoc) => HouseholdDoc): Promise<void> {
+  const doc = await db.households.findOne(HOUSEHOLD_ID).exec();
+  if (!doc) return;
+  await doc.incrementalModify((current) => ({ ...change(current), updatedAt: Date.now() }));
+}
+
 export async function savePerson(db: MealprepDb, person: Person): Promise<void> {
   await db.persons.upsert({ ...person, householdId: HOUSEHOLD_ID, updatedAt: Date.now() });
 }
@@ -57,15 +64,35 @@ export async function saveMeal(db: MealprepDb, meal: Meal): Promise<void> {
   await db.meals.upsert({ ...meal, householdId: HOUSEHOLD_ID, updatedAt: Date.now() });
 }
 
+/**
+ * Ändert die Portion einer Person um delta (auf 0,25 gerundet) auf Basis des gespeicherten Stands.
+ * 0 entfernt die Person aus der Mahlzeit.
+ */
+export async function changePortion(db: MealprepDb, mealId: string, personId: string, delta: number): Promise<void> {
+  const doc = await db.meals.findOne(mealId).exec();
+  if (!doc) return;
+  await doc.incrementalModify((current) => {
+    const next = Math.max(0, Math.round(((current.portions[personId] ?? 0) + delta) * 4) / 4);
+    const portions = { ...current.portions, [personId]: next };
+    if (next === 0) delete portions[personId];
+    return { ...current, portions, updatedAt: Date.now() };
+  });
+}
+
 export async function deleteMeal(db: MealprepDb, mealId: string): Promise<void> {
   await db.meals.findOne(mealId).remove();
 }
 
-export async function setChecked(db: MealprepDb, weekStart: string, ingredientId: string, checked: boolean): Promise<void> {
+/** Schlüssel einer Einkaufsliste: jeder Zeitraum (Woche, Kochtag, Tag) hat eigene Haken */
+export function listKey(from: string, to: string): string {
+  return `${from}_${to}`;
+}
+
+export async function setChecked(db: MealprepDb, key: string, ingredientId: string, checked: boolean): Promise<void> {
   await db.shoppingchecks.upsert({
-    id: `${weekStart}:${ingredientId}`,
+    id: `${key}:${ingredientId}`,
     householdId: HOUSEHOLD_ID,
-    weekStart,
+    listKey: key,
     ingredientId,
     checked,
     updatedAt: Date.now(),

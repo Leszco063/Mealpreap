@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { MEAL_TYPES, type IsoDate, type MealType } from '../../domain/types';
+import type { IsoDate, MealType } from '../../domain/types';
 import { MEAL_TYPE_LABEL } from '../../domain/labels';
 import { addDays, isoWeekday, startOfWeek, todayLocal, weekDates } from '../../domain/dates';
-import { dayNutrition } from '../../domain/plan';
+import { dayNutrition, shoppingMealRange, visibleSlots } from '../../domain/plan';
 import { checkMeal } from '../../domain/rules';
 import { buildShoppingList } from '../../domain/shopping';
 import { useHousehold, useMeals, usePersons } from '../../db/hooks';
-import { deleteMeal, saveMeal } from '../../db/repo';
+import { changePortion, deleteMeal } from '../../db/repo';
 import type { HouseholdDoc, MealDoc, PersonDoc } from '../../db/types';
 import { useApp } from '../context';
 import { go } from '../router';
@@ -20,12 +20,7 @@ function MealRow({ meal, persons, household }: { meal: MealDoc; persons: PersonD
   const recipe = lookupRecipe(meal.recipeId);
   const violations = checkMeal(meal, { lookupIngredient, lookupRecipe, persons, cookWeekdays: household.cookDays });
 
-  const changePortion = (personId: string, delta: number) => {
-    const next = Math.max(0, Math.round(((meal.portions[personId] ?? 0) + delta) * 4) / 4);
-    const portions = { ...meal.portions, [personId]: next };
-    if (next === 0) delete portions[personId];
-    void saveMeal(db, { ...meal, portions });
-  };
+  const change = (personId: string, delta: number) => void changePortion(db, meal.id, personId, delta);
 
   return (
     <div className="rounded-xl bg-stone-50 p-3 dark:bg-stone-800/50">
@@ -42,11 +37,11 @@ function MealRow({ meal, persons, household }: { meal: MealDoc; persons: PersonD
         {persons.map((p) => (
           <div key={p.id} className="flex items-center gap-1 text-sm">
             <span className="text-stone-600 dark:text-stone-400">{p.name}</span>
-            <button type="button" className="h-7 w-7 rounded-full border" aria-label={`${p.name} weniger`} onClick={() => changePortion(p.id, -0.25)}>
+            <button type="button" className="h-7 w-7 rounded-full border" aria-label={`${p.name} weniger`} onClick={() => change(p.id, -0.25)}>
               −
             </button>
             <span className="w-9 text-center">{fmtNum(meal.portions[p.id] ?? 0)}</span>
-            <button type="button" className="h-7 w-7 rounded-full border" aria-label={`${p.name} mehr`} onClick={() => changePortion(p.id, 0.25)}>
+            <button type="button" className="h-7 w-7 rounded-full border" aria-label={`${p.name} mehr`} onClick={() => change(p.id, 0.25)}>
               +
             </button>
           </div>
@@ -67,7 +62,9 @@ export function WeekScreen() {
   const persons = usePersons(db);
   const [weekStart, setWeekStart] = useState(() => startOfWeek(todayLocal()));
   const weekEnd = addDays(weekStart, 6);
-  const meals = useMeals(db, weekStart, weekEnd);
+  // Auch Gerichte der Folgewoche laden: sie können in dieser Woche vorgekocht (und eingekauft) werden
+  const range = shoppingMealRange(weekStart);
+  const meals = useMeals(db, range.from, range.to);
   const [picker, setPicker] = useState<{ date: IsoDate; slot: MealType } | null>(null);
 
   if (!household) return null;
@@ -85,7 +82,8 @@ export function WeekScreen() {
     );
   }
 
-  const slots = MEAL_TYPES.filter((m) => persons.some((p) => p.mealSlots.includes(m)));
+  const weekMeals = meals.filter((m) => m.date >= weekStart && m.date <= weekEnd);
+  const slots = visibleSlots(persons, weekMeals);
   const shopping = buildShoppingList(meals, { lookupIngredient, lookupRecipe }, { from: weekStart, to: weekEnd });
   const budgetOk = shopping.totalEur <= household.weeklyBudgetEur;
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dayNutrition, defaultPortions, suggestCookDate } from './plan';
+import { dayNutrition, defaultPortions, shoppingMealRange, suggestCookDate, visibleSlots } from './plan';
 import { makeLookup } from './recipe';
 import { allIngredients, allRecipes, chili, lachsPfanne, overnightOats } from './fixtures.test-data';
 import type { Meal, Person } from './types';
@@ -58,5 +58,32 @@ describe('dayNutrition', () => {
   });
   it('0 Portionen und fremde Personen zählen nicht', () => {
     expect(dayNutrition(meals, '2026-09-28', 'b', ctx).kcal).toBe(0);
+  });
+});
+
+describe('suggestCookDate mit Untergrenze (kein Kochtag in der Vergangenheit)', () => {
+  it('überspringt Kochtage vor notBefore', () => {
+    // Mo 28.09. geplant am Mo 28.09.; So 27.09. liegt in der Vergangenheit → Esstag
+    expect(suggestCookDate('2026-09-28', chili, [3, 7], '2026-09-28')).toBe('2026-09-28');
+    // Fr 02.10. geplant am Mo 28.09.; Mi 30.09. ist erlaubt
+    expect(suggestCookDate('2026-10-02', chili, [3, 7], '2026-09-28')).toBe('2026-09-30');
+  });
+  it('Esstag in der Vergangenheit bleibt Esstag', () => {
+    expect(suggestCookDate('2026-09-25', chili, [3, 7], '2026-09-28')).toBe('2026-09-25');
+  });
+});
+
+describe('visibleSlots', () => {
+  it('Slots der Personen plus Slots, in denen schon etwas geplant ist', () => {
+    const persons = [person('a', ['lunch', 'dinner'])];
+    const m: Meal = { id: 'x', date: '2026-09-28', slot: 'breakfast', recipeId: 'overnight-oats', cookDate: '2026-09-28', portions: { a: 1 }, pinned: false };
+    expect(visibleSlots(persons, [])).toEqual(['lunch', 'dinner']);
+    expect(visibleSlots(persons, [m])).toEqual(['breakfast', 'lunch', 'dinner']);
+  });
+});
+
+describe('shoppingMealRange', () => {
+  it('lädt Mahlzeiten bis eine Woche nach Wochenende (vorgekocht diese Woche, gegessen nächste)', () => {
+    expect(shoppingMealRange('2026-09-28')).toEqual({ from: '2026-09-28', to: '2026-10-11' });
   });
 });

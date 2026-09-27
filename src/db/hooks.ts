@@ -35,14 +35,14 @@ export function useMeals(db: MealprepDb, from: string, to: string): MealDoc[] {
   return value;
 }
 
-/** Abhak-Status der Einkaufsliste einer Woche: ingredientId → abgehakt */
-export function useChecks(db: MealprepDb, weekStart: string): Map<string, boolean> {
+/** Abhak-Status einer Einkaufsliste (Schlüssel aus listKey()): ingredientId → abgehakt */
+export function useChecks(db: MealprepDb, key: string): Map<string, boolean> {
   const [value, setValue] = useState<Map<string, boolean>>(new Map());
   useEffect(() => {
     const sub = db.shoppingchecks
-      .find({ selector: { weekStart } })
+      .find({ selector: { listKey: key } })
       .$.subscribe((docs) => setValue(new Map(docs.map((d) => [d.ingredientId, d.checked]))));
     return () => sub.unsubscribe();
-  }, [db, weekStart]);
+  }, [db, key]);
   return value;
 }

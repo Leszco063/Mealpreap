@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { Person } from '../../domain/types';
 import { DIET_LABEL } from '../../domain/labels';
 import { useHousehold, usePersons } from '../../db/hooks';
-import { deletePerson, saveHousehold, savePerson } from '../../db/repo';
+import { deletePerson, savePerson, updateHousehold } from '../../db/repo';
 import { useApp } from '../context';
 import { Button, Card, Chip, Field, NumberInput, Screen } from '../components';
 import { WEEKDAY_SHORT } from '../format';
@@ -16,12 +16,11 @@ export function HouseholdScreen() {
 
   if (!household) return null;
 
-  const toggleCookDay = (day: number) => {
-    const cookDays = household.cookDays.includes(day)
-      ? household.cookDays.filter((d) => d !== day)
-      : [...household.cookDays, day].sort();
-    void saveHousehold(db, { ...household, cookDays });
-  };
+  const toggleCookDay = (day: number) =>
+    void updateHousehold(db, (h) => ({
+      ...h,
+      cookDays: h.cookDays.includes(day) ? h.cookDays.filter((d) => d !== day) : [...h.cookDays, day].sort(),
+    }));
 
   return (
     <Screen title="Haushalt">
@@ -32,7 +31,7 @@ export function HouseholdScreen() {
               value={household.weeklyBudgetEur}
               min={0}
               step={5}
-              onChange={(v) => void saveHousehold(db, { ...household, weeklyBudgetEur: v ?? 0 })}
+              onChange={(v) => void updateHousehold(db, (h) => ({ ...h, weeklyBudgetEur: v ?? 0 }))}
             />
           </Field>
           <Field label="Kochtage">

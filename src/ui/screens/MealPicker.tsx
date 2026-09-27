@@ -3,6 +3,7 @@ import type { IsoDate, MealType, Person } from '../../domain/types';
 import { MEAL_TYPE_LABEL } from '../../domain/labels';
 import { checkRecipeForPerson } from '../../domain/rules';
 import { defaultPortions, suggestCookDate } from '../../domain/plan';
+import { todayLocal } from '../../domain/dates';
 import { newId, saveMeal } from '../../db/repo';
 import { useApp } from '../context';
 import { Badge, inputClass, Modal } from '../components';
@@ -45,7 +46,7 @@ export function MealPicker({
       date,
       slot,
       recipeId,
-      cookDate: suggestCookDate(date, recipe, cookDays),
+      cookDate: suggestCookDate(date, recipe, cookDays, todayLocal()),
       portions: defaultPortions(persons, slot),
       pinned: false,
     });
