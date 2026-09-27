@@ -3,6 +3,7 @@ import { Screen } from './components';
 import { RecipesScreen } from './screens/RecipesScreen';
 import { RecipeDetailScreen } from './screens/RecipeDetailScreen';
 import { HouseholdScreen } from './screens/HouseholdScreen';
+import { WeekScreen } from './screens/WeekScreen';
 
 const TABS = [
   { path: 'woche', label: 'Woche', icon: '📅' },
@@ -23,6 +24,8 @@ export function Shell() {
           <RecipesScreen />
         ) : section === 'haushalt' ? (
           <HouseholdScreen />
+        ) : section === 'woche' ? (
+          <WeekScreen />
         ) : (
           <Screen title={TABS.find((t) => t.path === section)?.label ?? 'Mealprep'}>
             <p className="text-stone-500">Dieser Bereich folgt gleich.</p>
