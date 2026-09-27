@@ -46,6 +46,14 @@ describe('repo', () => {
     expect(await db.households.count().exec()).toBe(1);
   });
 
+  it('ensureHousehold verträgt gleichzeitige Aufrufe (React StrictMode)', async () => {
+    await freshDb();
+    const [a, b] = await Promise.all([ensureHousehold(db), ensureHousehold(db)]);
+    expect(a.id).toBe(HOUSEHOLD_ID);
+    expect(b.id).toBe(HOUSEHOLD_ID);
+    expect(await db.households.count().exec()).toBe(1);
+  });
+
   it('savePerson speichert mit Haushalt und Zeitstempel', async () => {
     await freshDb();
     await savePerson(db, alex);

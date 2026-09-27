@@ -19,8 +19,16 @@ export function newId(): string {
 export async function ensureHousehold(db: MealprepDb): Promise<HouseholdDoc> {
   const existing = await db.households.findOne(HOUSEHOLD_ID).exec();
   if (existing) return existing.toMutableJSON();
-  const created = await db.households.insert({ ...DEFAULT_HOUSEHOLD, updatedAt: Date.now() });
-  return created.toMutableJSON();
+  try {
+    const created = await db.households.insert({ ...DEFAULT_HOUSEHOLD, updatedAt: Date.now() });
+    return created.toMutableJSON();
+  } catch (e) {
+    // Gleichzeitiger zweiter Aufruf (z. B. React StrictMode, zweiter Tab) hat ihn schon angelegt
+    if ((e as { code?: string }).code !== 'CONFLICT') throw e;
+    const winner = await db.households.findOne(HOUSEHOLD_ID).exec();
+    if (!winner) throw e;
+    return winner.toMutableJSON();
+  }
 }
 
 export async function saveHousehold(db: MealprepDb, household: Omit<HouseholdDoc, 'updatedAt'>): Promise<void> {
